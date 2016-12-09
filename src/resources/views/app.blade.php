@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="{{ URL::asset('src/public/css/libs/sweetalert.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('src/public/css/app.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('src/public/css/homenavigation.css') }}">
-    <link rel="stylesheet" type="text/css" href="/travel/src/semantic/dist/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="/src/semantic/dist/semantic.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.2.0/dropzone.css">
 
 </head>
@@ -38,7 +38,7 @@
 <script src="{{ URL::asset('src/public/js/libs/sweetalert.js') }}"></script>
 <script src="{{ URL::asset('src/public/js/libs/FitText.js') }}"></script>
 <script src="{{ URL::asset('src/public/js/main.js') }}"></script>
-<script src="/travel/src/semantic/dist/semantic.min.js"></script>
+<script src="/src/semantic/dist/semantic.min.js"></script>
 
 @include('pages.partials.footer')
 @yield('scripts.footer')
