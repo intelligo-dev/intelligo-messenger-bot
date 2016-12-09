@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # travel
 Laravel 5.2 travel site
 
@@ -28,3 +29,6 @@ Languages used:
 Here is the link to the actual website:
 http://davidtrushkov.com/travel/
 
+=======
+# hackaton
+>>>>>>> c2227445d2baac7874fea3477e38226b976cb166
