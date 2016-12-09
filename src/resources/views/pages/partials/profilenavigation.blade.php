@@ -17,14 +17,14 @@
             <ul class="nav navbar-nav navbar-right">
                 @if (!$signedIn)
                     <li><a href="{{ url('/') }}" class="page-scroll">Нүүр</a></li>
-                    <li><a href="{{ route('travelflyers.index') }}" class="page-scroll">Ажил</a></li>
-                    <li><a href="{{ route('travelflyers.create') }}" class="page-scroll"> <i class="inverted blue world icon big"></i></a></li>
+                    <li><a href="{{ route('jobs.index') }}" class="page-scroll">Ажил</a></li>
+                    <li><a href="{{ route('jobs.create') }}" class="page-scroll"> <i class="inverted blue world icon big"></i></a></li>
                     <li><a href="{{ url('/login') }}" class="page-scroll">Нэвтрэх</a></li>
                     <li><a href="{{ url('/register') }}" class="page-scroll">Бүртгүүлэх</a></li>
                 @else
                     <li><a href="{{ url('/') }}" class="page-scroll">Нүүр</a></li>
-                    <li><a href="{{ route('travelflyers.index') }}" class="page-scroll">Ажил</a></li>
-                    <li><a href="{{ route('travelflyers.create') }}" class="page-scroll"> <i class="inverted blue world icon big"></i></a></li>
+                    <li><a href="{{ route('jobs.index') }}" class="page-scroll">Ажил</a></li>
+                    <li><a href="{{ route('jobs.create') }}" class="page-scroll"> <i class="inverted blue world icon big"></i></a></li>
                     <li><a href="{{ route('profile.index', $user->username) }}" class="page-scroll">{{ $user->username }}</a></li>
                     <li><a href="{{ route('leaderboards.index') }}" class="page-scroll"><i class="fa fa-diamond"></i> {{ $user->points->points }}</a></li>
                     <li><a href="{{ url('/logout') }}" class="page-scroll"><i class="fa fa-btn fa-sign-out"></i>Гарах</a></li>
@@ -73,7 +73,7 @@
         </a>
     </div>
     <div class="btn-group" role="group">
-        <a href="{{ route('profile.your-flyers', $user->username) }}">
+        <a href="{{ route('profile.your-jobs', $user->username) }}">
             <button type="button" id="favorites" class="btn btn-primary"><i class="book icon"></i>
                 <div class="hidden-xs">Таны оруулсан ажил</div>
             </button>

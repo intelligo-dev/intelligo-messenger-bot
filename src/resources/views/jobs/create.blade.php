@@ -16,7 +16,7 @@
 
         <hr>
 
-        <form method="post" action="{{ URL('travelflyers') }}" enctype="multipart/form-data">
+        <form method="post" action="{{ URL('jobs') }}" enctype="multipart/form-data">
 
             {{ csrf_field() }}
 
@@ -90,7 +90,7 @@
                     <hr>
                     <div class="form-group">
                         <button class="ui inverted green button">Үүсгэх</button>
-                        <a href="{{ route('travelflyers.index') }}" class="ui inverted red button">Буцах</a>
+                        <a href="{{ route('jobs.index') }}" class="ui inverted red button">Буцах</a>
                     </div>
                 </div>
 

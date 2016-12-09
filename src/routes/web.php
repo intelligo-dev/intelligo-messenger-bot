@@ -52,9 +52,9 @@ Route::group(['middleware' => ['web']], function () {
             'as'   => 'profile.index',
             'middleware' => ['auth'],
         ]);
-        // Get Your Flyers
+        // Get Your Jobs
         Route::get('/user/{username}/jobs', [
-            'uses' => '\App\Http\Controllers\ProfileController@getUserFlyers',
+            'uses' => '\App\Http\Controllers\ProfileController@getUserJobs',
             'as'   => 'profile.your-jobs',
             'middleware' => ['auth'],
         ]);
@@ -64,9 +64,9 @@ Route::group(['middleware' => ['web']], function () {
             'as'   => 'profile.edit-profile',
             'middleware' => ['auth']
         ]);
-        /** Get a Users travel Flyers to display in their Profile */
+        /** Get a Users  Jobs to display in their Profile */
         Route::get('{username}/jobs', [
-            'uses' => '\App\Http\Controllers\ProfileController@showFlyerForProfile',
+            'uses' => '\App\Http\Controllers\ProfileController@showJobForProfile',
             'as'   => 'profile.your-jobs',
             'middleware' => ['auth']
         ]);
@@ -96,34 +96,34 @@ Route::group(['middleware' => ['web']], function () {
 
 Route::group(['middleware' => ['web']], function () {
 
-    /** Resource Route For Travel Flyers */
+    /** Resource Route For Travel Jobs */
     Route::resource('jobs', 'JobsController');
 
-    /** Show a Flyer. **/
+    /** Show a Job. **/
     Route::get('{title}', 'JobsController@show');
 
-    /** Delete travel job. **/
+    /** Delete  job. **/
     Route::delete('/job/{id}', [
         'uses' => '\App\Http\Controllers\JobsController@delete',
         'as'   => 'profile.destroy',
     ]);
 
     /** Add a photo to a job **/
-    Route::post('{title}/photo', 'FlyerPhotosController@store');
+    Route::post('{title}/photo', 'JobPhotosController@store');
 
-    /** Delete Flyer photo **/
-    Route::delete('photos/{id}', 'FlyerPhotosController@destroy');
+    /** Delete Job photo **/
+    Route::delete('photos/{id}', 'JobPhotosController@destroy');
 
     /** Add a photo banner to a job **/
     Route::post('{title}/banner', 'JobsController@addBannerPhoto');
 
-    /** Delete Flyer Banner photo **/
+    /** Delete Job Banner photo **/
     Route::delete('photo/{id}', [
         'uses' => '\App\Http\Controllers\JobsController@destroyBannerPhoto',
         'as'   => 'job.delete.banner',
     ]);
 
-    /** Route to like a travel Flyer. **/
+    /** Route to like a  Job. **/
     Route::get('job/{jobId}/like', [
         'uses' => '\App\Http\Controllers\JobsController@getLike',
         'as'   => 'job.like',
@@ -137,19 +137,19 @@ Route::group(['middleware' => ['web']], function () {
         'middleware' => ['auth']
     ]);
 
-    /** Route to sort travel Flyers by Date asc */
+    /** Route to sort  Jobs by Date asc */
     Route::get('jobs/date/asc', [
-        'uses' => '\App\Http\Controllers\OrderByController@travelDateAsc',
+        'uses' => '\App\Http\Controllers\OrderByController@DateAsc',
         'as'   => 'jobs.asc',
     ]);
 
-    /** Route to sort travel Flyers by Date desc */
+    /** Route to sort  Jobs by Date desc */
     Route::get('jobs/date/desc', [
-        'uses' => '\App\Http\Controllers\OrderByController@travelDateDesc',
+        'uses' => '\App\Http\Controllers\OrderByController@DateDesc',
         'as'   => 'jobs.desc',
     ]);
 
-    /** Route to search travel jobs */
+    /** Route to search  jobs */
     Route::post('jobs/search',[
         'uses' => '\App\Http\Controllers\JobsController@search',
         'as'   => 'jobs.search',

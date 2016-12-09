@@ -16,7 +16,7 @@
 
         <hr>
 
-        {!! Form::model($flyer, ['method' => 'PATCH', 'action' => ['TravelFlyersController@update', $flyer->id]]) !!}
+        {!! Form::model($job, ['method' => 'PATCH', 'action' => ['TravelFlyersController@update', $job->id]]) !!}
 
             <div class="row">
                     {{ csrf_field() }}
@@ -24,7 +24,7 @@
                 <div class="col-md-6">
                     <div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">
                         <label for="title">Гарчиг:</label>
-                        <input type="text" name="title" id="title" class="form-control" value="{{ old('title') ? : $flyer->title }}" placeholder="Гарчиг...">
+                        <input type="text" name="title" id="title" class="form-control" value="{{ old('title') ? : $job->title }}" placeholder="Гарчиг...">
                         @if($errors->has('title'))
                             <span class="help-block">{{ $errors->first('title') }}</span>
                         @endif
@@ -34,7 +34,7 @@
                 <div class="col-md-6">
                     <div class="form-group{{ $errors->has('excerpt') ? ' has-error' : '' }}">
                         <label for="excerpt">Тайлбар:</label>
-                        <input type="text" name="excerpt" id="excerpt" class="form-control" value="{{ old('excerpt') ? : $flyer->excerpt }}" placeholder="Тайлбар...">
+                        <input type="text" name="excerpt" id="excerpt" class="form-control" value="{{ old('excerpt') ? : $job->excerpt }}" placeholder="Тайлбар...">
                         @if($errors->has('excerpt'))
                             <span class="help-block">{{ $errors->first('excerpt') }}</span>
                         @endif
@@ -46,7 +46,7 @@
 
                     <div class="form-group{{ $errors->has('description') ? ' has-error' : '' }}">
                         <label for="description">Дэлгэрэнгүй тайлбар:</label>
-                        <textarea class="form-control" name="description" id="description" rows="10" placeholder="Дэлгэрэнгүй тайлбар..." maxlength="3000">{{ old('description') ? : $flyer->description }}</textarea>
+                        <textarea class="form-control" name="description" id="description" rows="10" placeholder="Дэлгэрэнгүй тайлбар..." maxlength="3000">{{ old('description') ? : $job->description }}</textarea>
                         <div id="textarea_count"></div>
                         @if($errors->has('description'))
                             <span class="help-block">{{ $errors->first('description') }}</span>
@@ -59,7 +59,7 @@
                 <div class="col-md-12">
                     <div class="form-group{{ $errors->has('location') ? ' has-error' : '' }}">
                         <label>Байршил:</label>
-                        <input type="text" name="location" class="form-control" id="pac-input" placeholder="Байршил хайх..." value="{{ old('location') ? : $flyer->location }}" >
+                        <input type="text" name="location" class="form-control" id="pac-input" placeholder="Байршил хайх..." value="{{ old('location') ? : $job->location }}" >
                         @if($errors->has('location'))
                             <span class="help-block">{{ $errors->first('location') }}</span>
                         @endif
@@ -69,7 +69,7 @@
                 <div class="col-md-6">
                     <div class="form-group{{ $errors->has('lat') ? ' has-error' : '' }}">
                         <label for="lat">Өргөрөг:</label>
-                        <input type="text" class="form-control input-sm" name="lat" id="lat" value="{{ old('lat') ? : $flyer->lat }}">
+                        <input type="text" class="form-control input-sm" name="lat" id="lat" value="{{ old('lat') ? : $job->lat }}">
                         @if($errors->has('lat'))
                             <span class="help-block">{{ $errors->first('lat') }}</span>
                         @endif
@@ -79,7 +79,7 @@
                 <div class="col-md-6">
                     <div class="form-group{{ $errors->has('lng') ? ' has-error' : '' }}">
                         <label for="lng">Уртраг:</label>
-                        <input type="text" class="form-control input-sm" name="lng" id="lng" value="{{ old('lng') ? : $flyer->lng }}">
+                        <input type="text" class="form-control input-sm" name="lng" id="lng" value="{{ old('lng') ? : $job->lng }}">
                         @if($errors->has('lng'))
                             <span class="help-block">{{ $errors->first('lng') }}</span>
                         @endif
@@ -91,7 +91,7 @@
                     <hr>
                     <div class="form-group">
                         <button class="ui inverted green button">Засах</button>
-                        <a href="{{ route('travelflyers.index') }}" class="ui inverted red button">Гарах</a>
+                        <a href="{{ route('jobs.index') }}" class="ui inverted red button">Гарах</a>
                     </div>
                 </div>
 
@@ -108,8 +108,8 @@
     <script>
         function initAutocomplete() {
 
-            var lat = {{ $flyer->lat }};
-            var lng = {{ $flyer->lng }};
+            var lat = {{ $job->lat }};
+            var lng = {{ $job->lng }};
 
 
             var map = new google.maps.Map(document.getElementById('map'), {

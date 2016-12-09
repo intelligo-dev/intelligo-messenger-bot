@@ -8,7 +8,7 @@
     <p class="footer-links">
         <a href="{{ URL('/') }}">Нүүр</a> |
 
-        <a href="{{ route('travelflyers.index') }}">Ажил</a>
+        <a href="{{ route('jobs.index') }}">Ажил</a>
     </p>
 
     <p class="footer-company-name">iHelp &copy; 2016</p>

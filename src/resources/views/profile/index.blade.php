@@ -51,7 +51,7 @@
                 <div class="profile-content">
                     <div class="description">
                         <i class="travel icon"></i>
-                       {{ $user->flyers->count() }} Ажил {{ str_plural('Ажил', $user->flyers->count()) }}
+                       {{ $user->jobs->count() }} Ажил {{ str_plural('Ажил', $user->jobs->count()) }}
                     </div>
                     <div class="description">
                         <i class="fa fa-diamond"></i>

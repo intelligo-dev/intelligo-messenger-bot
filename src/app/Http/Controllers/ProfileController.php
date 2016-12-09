@@ -52,7 +52,7 @@ class ProfileController extends Controller {
         $user = User::where('username', $username)->first();
 
         // Return view with user.
-        return view('profile.your-flyers', compact('user'));
+        return view('profile.your-jobs', compact('user'));
     }
 
 
@@ -109,13 +109,13 @@ class ProfileController extends Controller {
     /**
      * Display a Users Travel Flyers in their Profile under Your Flyers section.
      *
-     * @param Flyer $flyer
+     * @param Flyer $job
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function showFlyerForProfile(Flyer $flyer) {
+    public function showFlyerForProfile(Flyer $job) {
         //
         $ProfileTravelFlyers = Flyer::where('user_id', '=', Auth::user()->id)->latest()->get();
-        return view('profile.your-flyers', compact('ProfileTravelFlyers'));
+        return view('profile.your-jobs', compact('ProfileTravelFlyers'));
     }
 
 
@@ -161,7 +161,7 @@ class ProfileController extends Controller {
 
 
     /**
-     * Get a users Public Profile with thier information, flyers, and statuses.
+     * Get a users Public Profile with thier information, jobs, and statuses.
      *
      * @param $id
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View

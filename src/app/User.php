@@ -3,7 +3,7 @@
 namespace App;
 
 use Auth;
-use App\Flyer;
+use App\Job;
 use App\Points;
 use App\Status;
 use Carbon\Carbon;
@@ -100,23 +100,23 @@ class User extends Authenticatable
 
 
     /**
-     * One user can have many Travel Flyers.
+     * One user can have many Travel Jobs.
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function flyers() {
-        return $this->hasMany('App\Flyer');
+    public function jobs() {
+        return $this->hasMany('App\Job');
     }
 
 
     /**
-     * Assign the user id and save the travel flyer.
+     * Assign the user id and save the travel job.
      *
-     * @param \App\Flyer $flyer
+     * @param \App\Job $job
      * @return \Illuminate\Database\Eloquent\Model
      */
-    public function publish(Flyer $flyer) {
-        return $this->flyers()->save($flyer);
+    public function publish(Job $job) {
+        return $this->jobs()->save($job);
     }
 
 
@@ -168,19 +168,19 @@ class User extends Authenticatable
 
 
     /**
-     * Check to see if a User has Liked a Flyer once, if they
+     * Check to see if a User has Liked a Job once, if they
      * did, put in place a solution so users cant like a status again.
      *
-     * @param \App\Flyer $flyer
+     * @param \App\Job $job
      * @return bool
      */
-    public function hasLikedFlyer(Flyer $flyer) {
-        // Return a boolean with $flyer set to likes
-        // where the 'likeable_id' = the flyer ID
-        // and where the 'likeable_type' = to the class name to the flyer we pass in
-        return (bool) $flyer->likes
-            ->where('likeable_id', $flyer->id)
-            ->where('likeable_type', get_class($flyer))
+    public function hasLikedJob(Job $job) {
+        // Return a boolean with $job set to likes
+        // where the 'likeable_id' = the job ID
+        // and where the 'likeable_type' = to the class name to the job we pass in
+        return (bool) $job->likes
+            ->where('likeable_id', $job->id)
+            ->where('likeable_type', get_class($job))
             ->where('user_id', $this->id)
             ->count();
     }

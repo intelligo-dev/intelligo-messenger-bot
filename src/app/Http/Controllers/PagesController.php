@@ -17,14 +17,14 @@ class PagesController extends Controller {
      */
     public function index() {
 
-        // Select ALL from 'flyers', join 'flyer_banner' table where the 'flyers "id" = "flyer_id" in 'flyer_banner' table.
-        $flyer = DB::table('flyers')
-            ->join('flyer_banner', function ($join) {
-                $join->on('flyers.id', '=', 'flyer_banner.flyer_id');
+        // Select ALL from 'jobs', join 'job_banner' table where the 'jobs "id" = "job_id" in 'job_banner' table.
+        $job = DB::table('jobs')
+            ->join('job_banner', function ($join) {
+                $join->on('jobs.id', '=', 'job_banner.job_id');
             })->get();
 
         // Return view.
-        return view('pages.index', compact('flyer'));
+        return view('pages.index', compact('job'));
     }
 
 

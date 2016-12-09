@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name=description content="Share and explore travel destinations around the world with others" />
-    <meta name="keywords" content="Travel, Share, travelshare, explore, destinations, users, discover, places, connect, world, flyers, travelflyers" />
+    <meta name="keywords" content="Travel, Share, travelshare, explore, destinations, users, discover, places, connect, world, jobs, jobs" />
     <meta name="author" content="David Trushkov" />
     <link rel="shortcut icon" href="{!! asset('/src/public/css/Travel-Share-Icon.png') !!}" />
 

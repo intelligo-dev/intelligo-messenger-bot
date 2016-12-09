@@ -10,26 +10,26 @@ class OrderByController extends TravelFlyersController {
 
 
     /**
-     * @param Flyer $flyer
+     * @param Flyer $job
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function travelDateAsc(Flyer $flyer)
+    public function travelDateAsc(Flyer $job)
     {
-        $flyer = Flyer::orderBy('created_at', 'asc')->paginate(15);
+        $job = Flyer::orderBy('created_at', 'asc')->paginate(15);
 
-        return view('travelflyers.index', ['flyer' => $flyer]);
+        return view('traveljobs.index', ['job' => $job]);
     }
 
 
     /**
-     * @param Flyer $flyer
+     * @param Flyer $job
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function travelDateDesc(Flyer $flyer)
+    public function travelDateDesc(Flyer $job)
     {
-        $flyer = Flyer::orderBy('created_at', 'desc')->paginate(15);
+        $job = Flyer::orderBy('created_at', 'desc')->paginate(15);
 
-        return view('travelflyers.index', ['flyer' => $flyer]);
+        return view('traveljobs.index', ['job' => $job]);
     }
 
 }

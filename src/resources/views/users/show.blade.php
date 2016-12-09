@@ -42,14 +42,14 @@
                         <div class="ui link cards" id="Travel-Flyer-Display-Cards">
                             <div class="card" id="Flyer-Card">
                                 <div class="image">
-                                    <a href="{{ route('travelflyers.show', $public->title) }}">
+                                    <a href="{{ route('jobs.show', $public->title) }}">
                                         @foreach ($public->bannerPhotos as $photo)
                                             <img src="/travel/{{ $photo->thumbnail_path }}" alt="{{ $publicName->username }}" data-id="{{ $photo->id }}">
                                         @endforeach
                                     </a>
                                 </div>
                                 <div class="content">
-                                    <a href="{{ route('travelflyers.show', $public->title) }}">
+                                    <a href="{{ route('jobs.show', $public->title) }}">
                                         <h4 class="ui header"> {{ str_limit($public->title, $limit = 80, $end = '...') }}</h4>
                                     </a>
                                     <div class="description">
@@ -84,7 +84,7 @@
 
         <br>
         <a href="{{ URL::previous() }}"><button class="ui inverted red button">Буцах</button></a>
-        <a href="{{ route('travelflyers.index') }}"><button class="ui inverted green button">Бүх ажил</button></a>
+        <a href="{{ route('jobs.index') }}"><button class="ui inverted green button">Бүх ажил</button></a>
 
         <div class="col-md-12">
             @include('users.partials.status')

@@ -102,19 +102,19 @@
 
                 // Multiple Markers
                 var markers = [
-                    @foreach($flyer as $flyers)
-                        ['', {{ $flyers->lat }}, {{ $flyers->lng }} ],
+                    @foreach($job as $jobs)
+                        ['', {{ $jobs->lat }}, {{ $jobs->lng }} ],
                     @endforeach
 
                 ];
 
                 var infoWindowContent = [
-                    @foreach($flyer as $flyers)
+                    @foreach($job as $jobs)
                     [
                         '<div class="info_content">' +
-                            '<a href="{{ $flyers->title }}">' +
-                                '<img class="ui top aligned small image" src="/travel/{{ $flyers->thumbnail_path }}" alt="Test">' +
-                                '<h5 id="GoogleMaps-Content-Title">{{ $flyers->title }}</h5>' +
+                            '<a href="{{ $jobs->title }}">' +
+                                '<img class="ui top aligned small image" src="/travel/{{ $jobs->thumbnail_path }}" alt="Test">' +
+                                '<h5 id="GoogleMaps-Content-Title">{{ $jobs->title }}</h5>' +
                             '</a>' +
                         '</div>'
                     ],
