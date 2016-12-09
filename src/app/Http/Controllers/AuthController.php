@@ -67,7 +67,7 @@ class AuthController extends Controller {
         $mailer->sendEmailConfirmationTo($user);
 
         // Flash a info message saying you need to confirm your email.
-        flash()->overlay('Info', 'Please confirm your email address in your inbox.');
+        flash()->overlay('Анхаар', 'Та мэйл хаягаа шалгана уу.');
 
         return redirect()->back();
     }
@@ -85,7 +85,7 @@ class AuthController extends Controller {
         User::whereToken($token)->firstOrFail()->confirmEmail();
 
         // Flash a info message saying you need to confirm your email.
-        flash()->success('Success', 'You are now confirmed. Please sign in.');
+        flash()->success('Амжилттай', 'Таны бүртгэл амжилттай баталгаажлаа.');
 
         return redirect('/');
     }
@@ -121,12 +121,12 @@ class AuthController extends Controller {
 
         // login in user if successful
         if ($this->signIn($request)) {
-            flash()->success('Success', 'You have successfully signed in.');
+            flash()->success('Амжилттай', 'Амжилттай нэвтэрлээ.');
             return redirect('/');
         }
 
         // Else, show error message, and redirect them back to login.php.
-        flash()->customErrorOverlay('Error', 'Could not sign you in with those credentials');
+        flash()->customErrorOverlay('Алдаа', 'Нэвтрэх үед алдаа гарлаа');
 
         return redirect('login');
 

@@ -103,7 +103,7 @@ class Job extends Model
      *
      * @return mixed
      */
-    public function pathToSmallJob() {
+    public function pathToJob() {
         return $this->title;
     }
 
