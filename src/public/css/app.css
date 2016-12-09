@@ -403,7 +403,7 @@ img {
 
 /** SHOW TRAVEL FLYERS INDEX PAGE **/
 #Flyers-ShowAll-Container {
-  padding-top: 5%; }
+  padding-top: 20px; }
 
 #Travel-Flyer-Display-Cards {
   height: 330px;
@@ -444,11 +444,6 @@ input[type=text] {
   padding-right: 0;
   border-radius: 0;
   background-color: transparent; }
-
-#Flyers-Search-Fluid-Container {
-  padding: 10px;
-  margin-top: -5px;
-  background-color: #428bca; }
 
 /** FOR PUBLIC PROFILE CSS **/
 /**-- FOR BOOTSTRAP DROP-DOWN FOR BADGES --**/

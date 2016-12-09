@@ -4,48 +4,24 @@
 
     @include('pages.partials.navigation')
 
-    <div class="container-fluid" id="Flyers-Search-Fluid-Container">
-        <div class="container" id="Flyers-Search-Sub-Container">
-            <div class="" id="Flyers-Search-Jumbotron">
-
-                <div class="col-sm-6 col-md-6">
-
-                    {!! Form::open(array('url' => 'jobs/search')) !!}
-                        <div class="typeahead-container">
-                            <div class="typeahead-field">
-
-                                <span class="typeahead-query">
-                                    {!! Form::text('keyword', null, array('id' => 'job-query', 'placeholder' => 'Ажил хайх...', 'autocomplete' =>'off')) !!}
-                                </span>
-                                {!! Form::submit('Хайх', ['class' => 'ui inverted button', 'id' => 'Search-Button']) !!}
-
-                            </div>
-                        </div>
-                    {!! Form::close() !!}
-
-                </div>
-                <div class="col-sm-3 col-md-3">
-                    <a href="{{ route('jobs.desc') }}" class="ui inverted button">
-                        Шинэ
-                    </a>
-                    <a href="{{ route('jobs.asc') }}" class="ui inverted button">
-                        Хуучин
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container" style="padding-bottom: 0;">
+    <div class="" style="padding-bottom: 0;">
 
         <div class="col-md-6" style="padding: 0;">
-            <div id="map_home"></div>
-            <br><br>
+         {!! Form::open(array('url' => 'jobs/search')) !!}
+            <div class="typeahead-field">
+                <span class="typeahead-query">
+                    {!! Form::text('keyword', null, array('id' => 'job-query', 'placeholder' => 'Ажил хайх...', 'autocomplete' =>'off')) !!}
+                </span>
+            </div>
+            {!! Form::close() !!}
+            <div id="map_home">
+            </div>
         </div>
 
         <div class="col-md-6" id="Flyers-ShowAll-Container">
+
             @foreach($job as $jobs)
-                <div class="col-sm-6 col-md-4">
+                <div class="col-sm-6 col-md-6">
                     <div class="row">
                         <div class="ui link cards" id="Travel-Flyer-Display-Cards">
                             <div class="card" id="Flyer-Card">
