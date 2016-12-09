@@ -36,7 +36,7 @@
 
         <div class="col-md-12" id="Public-Profile-Users-Flyers-Container">
             <h4 id="Public-Profile-Header">{{ $publicName->username }}ий оруулсан ажлын саналууд</h4><hr>
-            @foreach($ProfileFlyers as $public)
+            @foreach($ProfileJobs as $public)
                 <div class="col-sm-6 col-md-4" id="card-center">
                     <div class="row">
                         <div class="ui link cards" id="Travel-Flyer-Display-Cards">
@@ -44,7 +44,7 @@
                                 <div class="image">
                                     <a href="{{ route('jobs.show', $public->title) }}">
                                         @foreach ($public->bannerPhotos as $photo)
-                                            <img src="/travel/{{ $photo->thumbnail_path }}" alt="{{ $publicName->username }}" data-id="{{ $photo->id }}">
+                                            <img src="/{{ $photo->thumbnail_path }}" alt="{{ $publicName->username }}" data-id="{{ $photo->id }}">
                                         @endforeach
                                     </a>
                                 </div>

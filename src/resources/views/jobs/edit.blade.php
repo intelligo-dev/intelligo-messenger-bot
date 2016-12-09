@@ -16,7 +16,7 @@
 
         <hr>
 
-        {!! Form::model($job, ['method' => 'PATCH', 'action' => ['TravelFlyersController@update', $job->id]]) !!}
+        {!! Form::model($job, ['method' => 'PATCH', 'action' => ['JobsController@update', $job->id]]) !!}
 
             <div class="row">
                     {{ csrf_field() }}

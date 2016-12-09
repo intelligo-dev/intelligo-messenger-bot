@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Flyer;
+use App\Job;
 use App\Http\Requests;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
@@ -11,7 +11,7 @@ class PagesController extends Controller {
 
 
     /**
-     * Show Flyer Banner and title in the google maps on the front-page.
+     * Show Job Banner and title in the google maps on the front-page.
      *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */

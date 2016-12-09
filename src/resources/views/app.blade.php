@@ -40,7 +40,6 @@
 <script src="{{ URL::asset('src/public/js/main.js') }}"></script>
 <script src="/src/semantic/dist/semantic.min.js"></script>
 
-@include('pages.partials.footer')
 @yield('scripts.footer')
 @include('flash')
 

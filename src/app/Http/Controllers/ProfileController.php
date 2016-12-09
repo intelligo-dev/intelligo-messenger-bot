@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
-use App\Flyer;
+use App\Job;
 use App\Points;
 use App\Status;
 use App\ProfilePhoto;
@@ -41,12 +41,12 @@ class ProfileController extends Controller {
 
 
     /**
-     * Get users Travel Flyers in their Profile Page
+     * Get users Travel Jobs in their Profile Page
      *
      * @param $username
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function getUserFlyers($username) {
+    public function getUserJobs($username) {
 
         // SELECT from User where username = current username signed in.
         $user = User::where('username', $username)->first();
@@ -107,15 +107,15 @@ class ProfileController extends Controller {
 
 
     /**
-     * Display a Users Travel Flyers in their Profile under Your Flyers section.
+     * Display a Users Travel Jobs in their Profile under Your Jobs section.
      *
-     * @param Flyer $job
+     * @param Job $job
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function showFlyerForProfile(Flyer $job) {
+    public function showJobForProfile(Job $job) {
         //
-        $ProfileTravelFlyers = Flyer::where('user_id', '=', Auth::user()->id)->latest()->get();
-        return view('profile.your-jobs', compact('ProfileTravelFlyers'));
+        $ProfileJobs = Job::where('user_id', '=', Auth::user()->id)->latest()->get();
+        return view('profile.your-jobs', compact('ProfileJobs'));
     }
 
 
@@ -171,15 +171,15 @@ class ProfileController extends Controller {
         // Locate the users id
         $publicName = User::UserLocatedAt($id);
 
-        // Find the users Travel Flyers.
-        $ProfileFlyers = Flyer::where('user_id', '=', $id)->latest()->get();
+        // Find the users Travel Jobs.
+        $ProfileJobs = Job::where('user_id', '=', $id)->latest()->get();
 
         // Find the users statuses.
         $statuses = Status::NotReply()->where('user_id', '=', $id)
             ->orderby('created_at', 'desc')->paginate(10);
 
         // Return a view with ALL users information.
-        return view('users.show', compact('publicName', 'ProfileFlyers', 'statuses'));
+        return view('users.show', compact('publicName', 'ProfileJobs', 'statuses'));
     }
 
 

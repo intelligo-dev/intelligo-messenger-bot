@@ -77,9 +77,9 @@ Route::group(['middleware' => ['web']], function () {
             'as'   => 'profile.index',
             'middleware' => ['auth'],
         ]);
-        // Get Your Flyers
+        // Get Your Jobs
         Route::get('/user/{username}/flyers', [
-            'uses' => '\App\Http\Controllers\ProfileController@getUserFlyers',
+            'uses' => '\App\Http\Controllers\ProfileController@getUserJobs',
             'as'   => 'profile.your-flyers',
             'middleware' => ['auth'],
         ]);
@@ -89,9 +89,9 @@ Route::group(['middleware' => ['web']], function () {
             'as'   => 'profile.edit-profile',
             'middleware' => ['auth']
         ]);
-        /** Get a Users travel Flyers to display in their Profile */
+        /** Get a Users travel Jobs to display in their Profile */
         Route::get('{username}/flyers', [
-            'uses' => '\App\Http\Controllers\ProfileController@showFlyerForProfile',
+            'uses' => '\App\Http\Controllers\ProfileController@showJobForProfile',
             'as'   => 'profile.your-flyers',
             'middleware' => ['auth']
         ]);
@@ -121,36 +121,36 @@ Route::group(['middleware' => ['web']], function () {
 
 Route::group(['middleware' => ['web']], function () {
 
-    /** Resource Route For Travel Flyers */
-    Route::resource('travelflyers', 'TravelFlyersController');
+    /** Resource Route For Travel Jobs */
+    Route::resource('travelflyers', 'TravelJobsController');
 
-    /** Show a Flyer. **/
-    Route::get('{title}', 'TravelFlyersController@show');
+    /** Show a Job. **/
+    Route::get('{title}', 'TravelJobsController@show');
 
     /** Delete travel flyer. **/
     Route::delete('/flyer/{id}', [
-        'uses' => '\App\Http\Controllers\TravelFlyersController@delete',
+        'uses' => '\App\Http\Controllers\TravelJobsController@delete',
         'as'   => 'profile.destroy',
     ]);
 
     /** Add a photo to a flyer **/
-    Route::post('{title}/photo', 'FlyerPhotosController@store');
+    Route::post('{title}/photo', 'JobPhotosController@store');
 
-    /** Delete Flyer photo **/
-    Route::delete('photos/{id}', 'FlyerPhotosController@destroy');
+    /** Delete Job photo **/
+    Route::delete('photos/{id}', 'JobPhotosController@destroy');
 
     /** Add a photo banner to a flyer **/
-    Route::post('{title}/banner', 'TravelFlyersController@addBannerPhoto');
+    Route::post('{title}/banner', 'TravelJobsController@addBannerPhoto');
 
-    /** Delete Flyer Banner photo **/
+    /** Delete Job Banner photo **/
     Route::delete('photo/{id}', [
-        'uses' => '\App\Http\Controllers\TravelFlyersController@destroyBannerPhoto',
+        'uses' => '\App\Http\Controllers\TravelJobsController@destroyBannerPhoto',
         'as'   => 'flyer.delete.banner',
     ]);
 
-    /** Route to like a travel Flyer. **/
+    /** Route to like a travel Job. **/
     Route::get('flyer/{flyerId}/like', [
-        'uses' => '\App\Http\Controllers\TravelFlyersController@getLike',
+        'uses' => '\App\Http\Controllers\TravelJobsController@getLike',
         'as'   => 'flyer.like',
         'middleware' => ['auth']
     ]);
@@ -162,13 +162,13 @@ Route::group(['middleware' => ['web']], function () {
         'middleware' => ['auth']
     ]);
 
-    /** Route to sort travel Flyers by Date asc */
+    /** Route to sort travel Jobs by Date asc */
     Route::get('travelflyers/date/asc', [
         'uses' => '\App\Http\Controllers\OrderByController@travelDateAsc',
         'as'   => 'travelflyers.asc',
     ]);
 
-    /** Route to sort travel Flyers by Date desc */
+    /** Route to sort travel Jobs by Date desc */
     Route::get('travelflyers/date/desc', [
         'uses' => '\App\Http\Controllers\OrderByController@travelDateDesc',
         'as'   => 'travelflyers.desc',
@@ -176,7 +176,7 @@ Route::group(['middleware' => ['web']], function () {
 
     /** Route to search travel flyers */
     Route::post('travelflyers/search',[
-        'uses' => '\App\Http\Controllers\TravelFlyersController@search',
+        'uses' => '\App\Http\Controllers\TravelJobsController@search',
         'as'   => 'travelflyers.search',
     ]);
 

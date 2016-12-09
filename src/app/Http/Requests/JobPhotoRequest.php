@@ -9,7 +9,7 @@ class JobPhotoRequest extends Request
 {
     public function authorize()
     {
-        return Flyer::where([
+        return Job::where([
             'title'  => $this->title,
             'user_id' => $this->user()->id
         ])->exists();

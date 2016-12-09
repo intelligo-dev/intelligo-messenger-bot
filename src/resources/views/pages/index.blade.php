@@ -3,34 +3,11 @@
 
 @section('content')
 
-    <div class="container-fluid" id="Home-Container">
 
-        <div class="col-md-12" id="Home-Icon-col-md-12">
-            <div class="col-xs-12 col-md-4" id="Home-Icon-4">
-                <div id="Home-Icon-Div">
-                    <i class="huge blue circular marker icon"></i><br><br>
-                    <p>Хийлгэх ажлаа оруул</p>
-                </div>
-            </div>
-            <div class="col-xs-12 col-md-4" id="Home-Icon-4">
-                <div id="Home-Icon-Div">
-                    <i class="huge green circular users icon"></i><br><br>
-                    <p>Хамгийн амар холбоо тогтоо</p>
-                </div>
-            </div>
-            <div class="col-xs-12 col-md-4" id="Home-Icon-4">
-                <div id="Home-Icon-Div">
-                    <i class="huge blue circular world icon"></i><br><br>
-                    <p>Хамгийн ойрхон ажлаа хий нтр</p>
-                </div>
-            </div>
-        </div>
-
-    </div>
 
     <div class="container-fluid" id="Home-Container">
 
-        <div class="col-md-12" style="padding: 0;">
+        <div class="col-md-6" style="padding: 0;">
             <div id="map_home"></div>
             <br><br>
         </div>
@@ -46,7 +23,7 @@
             jQuery(function($) {
                 // Asynchronously Load the map API
                 var script = document.createElement('script');
-                script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyD87RDjkG0ShbpfixIowvvDWg2BiwdNLko&callback=initAutocomplete";
+                script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAV4KOI-DE4LL2a9I7ySS3v1Fru0R8y60I&callback=initAutocomplete";
                 document.body.appendChild(script);
             });
 
@@ -56,7 +33,7 @@
                 var bounds = new google.maps.LatLngBounds();
                 var mapOptions = {
                     mapTypeId:google.maps.MapTypeId.TERRAIN,
-                    scrollwheel: false,
+                    scrollwheel: true,
                     styles: [{
                         "featureType": "administrative",
                         "elementType": "geometry",
@@ -98,7 +75,7 @@
 
                 // Display a map on the page
                 map = new google.maps.Map(document.getElementById("map_home"), mapOptions);
-                map.setTilt(45);
+                map.setTilt(5);
 
                 // Multiple Markers
                 var markers = [
@@ -113,7 +90,7 @@
                     [
                         '<div class="info_content">' +
                             '<a href="{{ $jobs->title }}">' +
-                                '<img class="ui top aligned small image" src="/travel/{{ $jobs->thumbnail_path }}" alt="Test">' +
+                                '<img class="ui top aligned small image" src="/{{ $jobs->thumbnail_path }}" alt="Test">' +
                                 '<h5 id="GoogleMaps-Content-Title">{{ $jobs->title }}</h5>' +
                             '</a>' +
                         '</div>'
@@ -124,7 +101,7 @@
                             // Display multiple markers on a map
                 var infoWindow = new google.maps.InfoWindow(), marker, i;
 
-                var image = '/travel/src/public/css/icon.png';
+                var image = '/src/public/css/icon.png';
 
                 // Loop through our array of markers & place each one on the map
                 for( i = 0; i < markers.length; i++ ) {
@@ -152,7 +129,7 @@
 
                 // Override our map zoom level once our fitBounds function runs (Make sure it only runs once)
                 var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
-                    this.setZoom(3);
+                    this.setZoom(14);
                     google.maps.event.removeListener(boundsListener);
                 });
 

@@ -46,7 +46,7 @@ function displayRandomPhotoArea() {
 
     $randomNumber = rand(0, (count($photoAreas) - 1));
 
-    echo '<img src="' . $photoAreas[$randomNumber] . '" id="Flyer-Banner-Default-Image" ">';
+    echo '<img src="' . $photoAreas[$randomNumber] . '" id="Job-Banner-Default-Image" ">';
 }
 
 
@@ -113,46 +113,46 @@ function ShowPointsFor5000Shaded() {
 
 
 
-/********************************* Travel Flyer Badge Images *********************************/
+/********************************* Travel Job Badge Images *********************************/
 
-function ShowFlyerFor1() {
-    return '/src/public/Badges/Travel-Flyer-Badges/first-flyer.png';
+function ShowJobFor1() {
+    return '/src/public/Badges/Travel-Job-Badges/first-flyer.png';
 }
 
-function ShowFlyerFor1Shaded() {
-    return '/src/public/Badges/Travel-Flyer-Badges/first-flyer-shaded.png';
+function ShowJobFor1Shaded() {
+    return '/src/public/Badges/Travel-Job-Badges/first-flyer-shaded.png';
 }
 
-function ShowFlyerFor5() {
-    return '/src/public/Badges/Travel-Flyer-Badges/fifth-flyer.png';
+function ShowJobFor5() {
+    return '/src/public/Badges/Travel-Job-Badges/fifth-flyer.png';
 }
 
-function ShowFlyerFor5Shaded() {
-    return '/src/public/Badges/Travel-Flyer-Badges/fifth-flyer-shaded.png';
+function ShowJobFor5Shaded() {
+    return '/src/public/Badges/Travel-Job-Badges/fifth-flyer-shaded.png';
 }
 
-function ShowFlyerFor10() {
-    return '/src/public/Badges/Travel-Flyer-Badges/tenth-flyer.png';
+function ShowJobFor10() {
+    return '/src/public/Badges/Travel-Job-Badges/tenth-flyer.png';
 }
 
-function ShowFlyerFor10Shaded() {
-    return '/src/public/Badges/Travel-Flyer-Badges/tenth-flyer-shaded.png';
+function ShowJobFor10Shaded() {
+    return '/src/public/Badges/Travel-Job-Badges/tenth-flyer-shaded.png';
 }
 
-function ShowFlyerFor25() {
-    return '/src/public/Badges/Travel-Flyer-Badges/twentyfifth-flyer.png';
+function ShowJobFor25() {
+    return '/src/public/Badges/Travel-Job-Badges/twentyfifth-flyer.png';
 }
 
-function ShowFlyerFor25Shaded() {
-    return '/src/public/Badges/Travel-Flyer-Badges/twentyfifth-flyer-shaded.png';
+function ShowJobFor25Shaded() {
+    return '/src/public/Badges/Travel-Job-Badges/twentyfifth-flyer-shaded.png';
 }
 
-function ShowFlyerFor50() {
-    return '/src/public/Badges/Travel-Flyer-Badges/fiftieth-flyer.png';
+function ShowJobFor50() {
+    return '/src/public/Badges/Travel-Job-Badges/fiftieth-flyer.png';
 }
 
-function ShowFlyerFor50Shaded() {
-    return '/src/public/Badges/Travel-Flyer-Badges/fiftieth-flyer-shaded.png';
+function ShowJobFor50Shaded() {
+    return '/src/public/Badges/Travel-Job-Badges/fiftieth-flyer-shaded.png';
 }
 
 

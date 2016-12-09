@@ -12,7 +12,7 @@ class CreateJobsPhotosTable extends Migration
      */
     public function up()
     {
-        Schema::create('jobs_photos', function (Blueprint $table) {
+        Schema::create('job_photos', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('job_id')->unsigned();
             $table->foreign('job_id')->references('id')->on('jobs')->onDelete('cascade');
@@ -30,6 +30,6 @@ class CreateJobsPhotosTable extends Migration
      */
     public function down()
     {
-        Schema::drop('jobs_photos');
+        Schema::drop('job_photos');
     }
 }

@@ -2,34 +2,34 @@
 
 namespace App\Http\Controllers;
 
-use App\Flyer;
+use App\Job;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class OrderByController extends TravelFlyersController {
+class OrderByController extends JobsController {
 
 
     /**
-     * @param Flyer $job
+     * @param Job $job
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function travelDateAsc(Flyer $job)
+    public function jobDateAsc(Job $job)
     {
-        $job = Flyer::orderBy('created_at', 'asc')->paginate(15);
+        $job = Job::orderBy('created_at', 'asc')->paginate(15);
 
-        return view('traveljobs.index', ['job' => $job]);
+        return view('jobs.index', ['job' => $job]);
     }
 
 
     /**
-     * @param Flyer $job
+     * @param Job $job
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function travelDateDesc(Flyer $job)
+    public function jobDateDesc(Job $job)
     {
-        $job = Flyer::orderBy('created_at', 'desc')->paginate(15);
+        $job = Job::orderBy('created_at', 'desc')->paginate(15);
 
-        return view('traveljobs.index', ['job' => $job]);
+        return view('jobs.index', ['job' => $job]);
     }
 
 }

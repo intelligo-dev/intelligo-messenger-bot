@@ -6,12 +6,12 @@ class PointsListener {
 
 
     /**
-     * when a user creates a Travel Flyer, award them 100 Points.
+     * when a user creates a Travel Job, award them 100 Points.
      * -- awardPoints() in User.php Model --
      *
      * @param $user
      */
-    public function whenUserCreatedFlyer($user) {
+    public function whenUserCreatedJob($user) {
         $user->awardPoints(100);
     }
 
