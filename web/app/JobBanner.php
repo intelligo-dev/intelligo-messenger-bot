@@ -59,7 +59,7 @@ class JobBanner extends Model
      * Get the banner photos base directory.
      */
     public function baseDir() {
-        return 'src/public/JobBanner/photos';
+        return 'web/public/JobBanner/photos';
     }
 
 

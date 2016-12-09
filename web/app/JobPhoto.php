@@ -26,7 +26,7 @@ class JobPhoto extends Model
     }
 
     public function baseDir() {
-        return 'src/public/JobPhotos/photos';
+        return 'web/public/JobPhotos/photos';
     }
 
 

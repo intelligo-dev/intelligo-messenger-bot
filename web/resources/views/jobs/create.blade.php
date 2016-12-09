@@ -103,7 +103,7 @@
 @stop
 
 @section('scripts.footer')
-    <script type="application/javascript" src="{{ URL::asset('src/public/js/maps/create-google-map.js') }}"></script>
+    <script type="application/javascript" src="{{ URL::asset('web/public/js/maps/create-google-map.js') }}"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaB_9hgeARViVKIT6O1pFKXRCSuYaol2A&libraries=places&callback=initAutocomplete"></script>
 @stop
 
