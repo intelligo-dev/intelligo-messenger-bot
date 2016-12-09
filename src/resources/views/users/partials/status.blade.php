@@ -1,10 +1,10 @@
 <br>
 <!-- If NOT signed in, show Login to post status link -->
 @if (!$signedIn)
-<a href="{{ url('/login') }}">Login to reply and post statuses</a>
+<a href="{{ url('/login') }}">Нэвтэрч орно уу</a>
 @endif
 
-<br><h3 class="ui dividing header">{{ $publicName->username }}'s Statuses</h3>
+<br><h3 class="ui dividing header">{{ $publicName->username }}'ии статусууд</h3>
 
 <!-- If NOT signed in, don't show Post status box -->
 @if (!$signedIn)
@@ -17,14 +17,14 @@
                 <div class="form-group{{ $errors->has('status') ? ' has-error' : '' }}">
                     <div class="ui form">
                         <div class="field">
-                            <textarea placeholder="Post a status..." name="status" class="form-control" rows="4"></textarea>
+                            <textarea placeholder="Статус бичих..." name="status" class="form-control" rows="4"></textarea>
                             @if($errors->has('status'))
                                 <span class="help-block">{{ $errors->first('status') }}</span>
                             @endif
                         </div>
                     </div>
                     <br>
-                    <button type="submit" class="btn btn-default">Post Status</button>
+                    <button type="submit" class="btn btn-default">Статус бичих</button>
                     <input type="hidden" name="_token" value="{{ Session::token() }}">
                 </div>
             </form>
@@ -38,7 +38,7 @@
 <div class="row">
     <div class="col-sm-8 col-lg-6">
         @if (!$statuses->count())
-            <p>There is nothing in {{ $publicName->username }}'s statuses timeline yet.</p>
+            <p>There is nothing in {{ $publicName->username }}ий статус.</p>
         @else
             @foreach($statuses as $status)
                 <div class="media">
@@ -92,14 +92,14 @@
                                 <div class="form-group{{ $errors->has("reply-{$status->id}") ? ' has-error' : '' }}">
                                     <div class="ui form">
                                         <div class="field">
-                                            <textarea name="reply-{{ $status->id }}" class="form-control" rows="3" placeholder="Reply to this status"></textarea>
+                                            <textarea name="reply-{{ $status->id }}" class="form-control" rows="3" placeholder="Хариулах"></textarea>
                                             @if($errors->has("reply-{$status->id}"))
                                                 <span class="help-block">{{ $errors->first("reply-{$status->id}") }}</span>
                                             @endif
                                         </div>
                                     </div>
                                 </div>
-                                <button type="submit" class="btn btn-default">Reply</button>
+                                <button type="submit" class="btn btn-default">Хариулах</button>
                                 <input type="hidden" name="_token" value="{{ Session::token() }}">
                             </form>
                         @endif

@@ -13,7 +13,7 @@
                     </div>
                     <div class="avatar">
                         @foreach ($publicName->Profilephotos as $photo)
-                            <img alt="{{ $publicName->username }}'s Profile Picture" src="/travel/{{ $photo->thumbnail_path }}">
+                            <img alt="{{ $publicName->username }}'s зураг" src="/travel/{{ $photo->thumbnail_path }}">
                         @endforeach
                     </div><br><br><br>
                     <div class="info">
@@ -22,7 +22,7 @@
                         </div>
                         <div class="desc" id="Public-Flyer-Person-Description">
                             @if ($publicName->summary == '')
-                                <p>{{ $publicName->username }} has no description about them self's.</p>
+                                <p>{{ $publicName->username }} өөрийнхөө тухай мэдээлэл оруулаагүй байна.</p>
                             @else
                                 {{ $publicName->summary }}
                             @endif
@@ -35,7 +35,7 @@
         </div>
 
         <div class="col-md-12" id="Public-Profile-Users-Flyers-Container">
-            <h4 id="Public-Profile-Header">{{ $publicName->username }}'S TRAVEL FLYERS</h4><hr>
+            <h4 id="Public-Profile-Header">{{ $publicName->username }}ий оруулсан ажлын саналууд</h4><hr>
             @foreach($ProfileFlyers as $public)
                 <div class="col-sm-6 col-md-4" id="card-center">
                     <div class="row">
@@ -83,8 +83,8 @@
         </div>
 
         <br>
-        <a href="{{ URL::previous() }}"><button class="ui inverted red button">Back</button></a>
-        <a href="{{ route('travelflyers.index') }}"><button class="ui inverted green button">All Travel Flyers</button></a>
+        <a href="{{ URL::previous() }}"><button class="ui inverted red button">Буцах</button></a>
+        <a href="{{ route('travelflyers.index') }}"><button class="ui inverted green button">Бүх ажил</button></a>
 
         <div class="col-md-12">
             @include('users.partials.status')
