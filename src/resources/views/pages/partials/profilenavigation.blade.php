@@ -18,15 +18,14 @@
                 @if (!$signedIn)
                     <li><a href="{{ url('/') }}" class="page-scroll">Нүүр</a></li>
                     <li><a href="{{ route('jobs.index') }}" class="page-scroll">Ажил</a></li>
-                    <li><a href="{{ route('jobs.create') }}" class="page-scroll"> <i class="inverted blue world icon big"></i></a></li>
+                    <li><a href="{{ url('/login') }}" class="page-scroll">Ажил нэмэх</a></li>
                     <li><a href="{{ url('/login') }}" class="page-scroll">Нэвтрэх</a></li>
                     <li><a href="{{ url('/register') }}" class="page-scroll">Бүртгүүлэх</a></li>
                 @else
                     <li><a href="{{ url('/') }}" class="page-scroll">Нүүр</a></li>
                     <li><a href="{{ route('jobs.index') }}" class="page-scroll">Ажил</a></li>
-                    <li><a href="{{ route('jobs.create') }}" class="page-scroll"> <i class="inverted blue world icon big"></i></a></li>
+                    <li><a href="{{ route('jobs.create') }}" class="page-scroll">Ажил нэмэх</a></li>
                     <li><a href="{{ route('profile.index', $user->username) }}" class="page-scroll">{{ $user->username }}</a></li>
-                    <li><a href="{{ route('leaderboards.index') }}" class="page-scroll"><i class="fa fa-diamond"></i> {{ $user->points->points }}</a></li>
                     <li><a href="{{ url('/logout') }}" class="page-scroll"><i class="fa fa-btn fa-sign-out"></i>Гарах</a></li>
                 @endif
             </ul>
