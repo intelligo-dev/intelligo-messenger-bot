@@ -1,4 +1,4 @@
-package mn.ihelp.android;
+package mn.ihelp;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

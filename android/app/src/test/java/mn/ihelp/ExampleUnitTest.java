@@ -1,4 +1,4 @@
-package mn.ihelp.android;
+package mn.ihelp;
 
 import org.junit.Test;
 
