@@ -20,10 +20,26 @@
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
+    </application>try {
+    Thread timerThread = new Thread(){
+    public void run(){
+    try{
+    sleep(500);
+    }catch(InterruptedException e){
+    e.printStackTrace();
+    }finally{
+    Intent intent = new Intent(SplashScreen.this,Main.class);
+    startActivity(intent);
+    finish();
+    }
+    }
+    };
+    timerThread.start();
+    }catch (Exception e){
+
+    }
 
 </manifest>

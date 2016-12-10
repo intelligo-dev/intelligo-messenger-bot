@@ -8,8 +8,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.webkit.WebView;
 
 public class MainActivity extends AppCompatActivity {
+
+    Boolean isInternetPresent = false;
+    MyAlertDialog alert = new MyAlertDialog();
+    ConnectionDetector cd;
+    private WebView myBlogWeb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
