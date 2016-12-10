@@ -80,7 +80,7 @@
         <div class="col-md-12" id="ProfileFormUpload">
             <hr>
             <h5 class="text-center">Өөрийн зургаа оруулна уу:</h5>
-            <form action="/travel/{{ $user->username }}/photos" method="post" class="dropzone" id="addPhotosForm" enctype="multipart/form-data">
+            <form action="/{{ $user->username }}/photos" method="post" class="dropzone" id="addPhotosForm" enctype="multipart/form-data">
                 {{ csrf_field() }}
             </form>
         </div>

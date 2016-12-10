@@ -20,7 +20,7 @@
                                 <div class="image">
                                     <a href="{{ route('jobs.show', $job->title) }}">
                                         @foreach ($job->bannerPhotos as $photo)
-                                            <img src="/travel/{{ $photo->thumbnail_path }}" alt="{{ $job->owner->username }}" data-id="{{ $photo->id }}">
+                                            <img src="/{{ $photo->thumbnail_path }}" alt="{{ $job->owner->username }}" data-id="{{ $photo->id }}">
                                         @endforeach
                                     </a>
                                 </div>
@@ -31,7 +31,7 @@
                                     <div class="meta"><br>
                                         @foreach ($job->owner->Profilephotos as $photo)
                                             <a href="{{ route('users.show', $job->id) }}" class="avatar">
-                                                <img class="ui avatar image mini" src="/travel/{{ $photo->thumbnail_path }}" alt="{{ $job->owner->username }}'s Profile Picture">
+                                                <img class="ui avatar image mini" src="/{{ $photo->thumbnail_path }}" alt="{{ $job->owner->username }}'s Profile Picture">
                                                 <span id="Flyer-Username-Index-Page">{{ $job->owner->username }}</span>
                                             </a>
                                         @endforeach

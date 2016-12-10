@@ -36,7 +36,7 @@
                         <div class="ui comments" id="Public-ui-comments">
                             <div class="comment">
                                 <a class="avatar">
-                                    <img alt="" src="/travel/{{ $photo->thumbnail_path }}">
+                                    <img alt="" src="/{{ $photo->thumbnail_path }}">
                                 </a>
                             </div>
                         </div>
@@ -59,7 +59,7 @@
                                     <div class="ui comments" id="Public-ui-comments">
                                         <div class="comment">
                                             <a class="avatar">
-                                                <img alt="" src="/travel/{{ $photo->thumbnail_path }}">
+                                                <img alt="" src="/{{ $photo->thumbnail_path }}">
                                             </a>
                                         </div>
                                     </div>
