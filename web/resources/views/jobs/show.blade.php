@@ -84,7 +84,7 @@
                 <form action="/travel/{{ $job->title }}/photo" method="post" class="dropzone" id="addFlyerPhotosForm" enctype="multipart/form-data">
                     {{ csrf_field() }}
                 </form>
-                <i>If photos not showing, <a href="#" onclick="window.location.reload();">Refresh</a> page.</i>
+                <i>Зураг харуулах боломжгүй байна, <a href="#" onclick="window.location.reload();">Refresh</a> хийнэ үү.</i>
             </div>
             @endif
         @endif
@@ -93,7 +93,7 @@
             <br><br>
             <div id="map"></div>
             <br><br>
-            <a href="{{ route('jobs.index') }}"><button class="ui inverted green button">All Travel Flyers</button></a>
+            <a href="{{ route('jobs.index') }}"><button class="ui inverted green button">Бүх ажлын санал</button></a>
             <br><br><hr>
         </div>
 
