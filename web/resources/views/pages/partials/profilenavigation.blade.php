@@ -1,5 +1,5 @@
 
-<nav id="tf-menu" class="navbar-fixed-top">
+<nav id="tf-menu" class="">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
