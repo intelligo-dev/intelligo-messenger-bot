@@ -756,4 +756,11 @@ input[type=text] {
   .footer-basic-centered .footer-links a {
     line-height: 1.8; } }
 
+/* header navigation color change */
+.navbar-toggle {
+  background-color: #fcac45; }
+
+.navbar-toggle .icon-bar {
+  background-color: white; }
+
 /*# sourceMappingURL=app.css.map */

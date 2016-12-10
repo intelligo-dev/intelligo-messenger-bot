@@ -949,4 +949,12 @@ input[type=text] {
 }
 
 
+/* header navigation color change */
+.navbar-toggle {
+    background-color: rgb(252, 172, 69);
+}
+.navbar-toggle .icon-bar {
+    background-color: white;
+}
+
 
