@@ -96,7 +96,7 @@ class ProfileController extends Controller {
             'summary' => $request->input('summary'),
         ]);
 
-        flash()->success('Success', 'Profile updated successfully!');
+        flash()->success('Амжилттай', 'Таны мэдээлэл амжилттай шинэчлэгдлээ!');
 
         // Then Redirect to Profile Edit Page
         return redirect()->route('profile.index', $user->username);
