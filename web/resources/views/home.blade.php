@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="{{ URL::asset('web/public/css/navigation.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('web/public/css/hackaton.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('web/public/css/dambii.css') }}">
+    
 
     <link rel="stylesheet" href="{{ URL::asset('web/public/css/toroo.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('web/public/css/libs/typeahead.css') }}">
@@ -47,6 +48,8 @@
 <script src="{{ URL::asset('web/public/js/libs/FitText.js') }}"></script>
 <script src="/web/semantic/dist/semantic.min.js"></script>
 <script src="{{ URL::asset('web/public/js/main.js') }}"></script>
+
+
 
 @yield('scripts.footer')
 @include('flash')

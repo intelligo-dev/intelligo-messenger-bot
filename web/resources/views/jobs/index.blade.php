@@ -11,7 +11,14 @@
                     <div class="form-group sell-type filter-job">
                         <div class="btn-group ">
 
-                        
+                        <div class="arzaidropdown">
+                         <label class="btn btn-ubhome dada" ><i class="child icon"> </i> songolt <input type="checkbox" name="vehicle" value="Bike"> </label>
+    
+                       </div>
+                       <div class="arzaidropdown">
+                         <label class="btn btn-ubhome dada" ><i class="child icon"> </i>songolt<input type="checkbox" name="vehicle" value="Bike"> </label>
+    
+                       </div>
 
                         <div class="arzaidropdown">
                             <select class="btn btn-ubhome dada">
@@ -38,8 +45,11 @@
                              </select>
                        </div>
                        <div class="arzaidropdown">
-                           
+                        <label class="btn btn-ubhome " >
+                       <a href=""> <i class="plus icon"></i>Дэлгэрэнгүй хайлт</a>
+                           </label>
                        </div>
+                       
                       
                        
                         </div>
@@ -120,6 +130,7 @@
 
 
 @section('scripts.footer')
+
     <script type="application/javascript" src="{{ asset('web/public/js/libs/typeahead.js') }}"></script>
     <script>
                 jQuery(function($) {

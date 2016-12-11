@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="{{ URL::asset('web/public/css/toroo.css') }}">
     <link rel="stylesheet" type="text/css" href="/web/semantic/dist/semantic.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.2.0/dropzone.css">
-    
+
 
 </head>
 
@@ -43,6 +43,8 @@
 <script src="{{ URL::asset('web/public/js/libs/FitText.js') }}"></script>
 <script src="{{ URL::asset('web/public/js/main.js') }}"></script>
 <script src="/web/semantic/dist/semantic.min.js"></script>
+
+
 
 @yield('scripts.footer')
 @include('flash')
