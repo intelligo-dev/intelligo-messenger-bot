@@ -7,19 +7,20 @@ function initAutocomplete() {
 
     var map = new google.maps.Map(document.getElementById('map'), {
         center: {
-            lat: 13.8688,
-            lng: 5.2195
+            lat: 47.9216185,
+            lng: 106.92236560000003
         },
-        zoom: 2,
+        zoom: 14,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     });
 
     var marker = new google.maps.Marker({
         position: {
-            lat: 38.8688,
-            lng: -39.2195
+            lat: 47.9216185,
+            lng: 106.92236560000003
         },
         map: map,
+        zoom: 14,
         animation: google.maps.Animation.DROP,
         draggable: true
     });
@@ -52,4 +53,3 @@ function initAutocomplete() {
 
 
 }
-//# sourceMappingURL=create-google-map.js.map

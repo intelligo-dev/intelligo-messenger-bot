@@ -16,10 +16,11 @@ function initAutocomplete() {
 
     var marker = new google.maps.Marker({
         position: {
-            lat: 38.8688,
-            lng: -39.2195
+            lat: 47.9216185,
+            lng: 106.92236560000003
         },
         map: map,
+        zoom: 14,
         animation: google.maps.Animation.DROP,
         draggable: true
     });

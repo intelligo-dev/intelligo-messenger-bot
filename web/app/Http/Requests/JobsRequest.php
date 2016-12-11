@@ -21,5 +21,4 @@ class JobsRequest extends Request {
             'lng'         => 'required',
         ];
     }
-
 }
