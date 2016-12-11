@@ -20,6 +20,7 @@
             <ul class="navbar-left header-search">
                 {!! Form::open(array('url' => 'jobs/search')) !!}
                 <div class="typeahead-field">
+                <i class="fa fa-search" aria-hidden="true" style="padding-top: 9px;"></i>
                     <span class="typeahead-query">
                         {!! Form::text('keyword', null, array('id' => 'job-query', 'placeholder' => 'Ажил хайх...', 'autocomplete' =>'off')) !!}
                     </span>
@@ -30,14 +31,14 @@
 
                 @if (!$signedIn)
                     <li><a href="{{ url('/') }}" class="page-scroll">Нүүр</a></li>
-                    <li><a href="{{ route('jobs.index') }}" class="page-scroll">Ажил</a></li>
-                    <li><a href="{{ url('/login') }}" class="page-scroll">Ажил нэмэх</a></li>
+                    <li><a href="{{ route('jobs.index') }}" class="page-scroll">Ажил хайх</a></li>
+                    <li><a href="{{ url('/login') }}" class="page-scroll">Ажил олгох</a></li>
                     <li><a href="{{ url('/login') }}" class="page-scroll">Нэвтрэх</a></li>
                     <li><a href="{{ url('/register') }}" class="page-scroll">Бүртгүүлэх</a></li>
                 @else
                     <li><a href="{{ url('/') }}" class="page-scroll">Нүүр</a></li>
-                    <li><a href="{{ route('jobs.index') }}" class="page-scroll">Ажил</a></li>
-                    <li><a href="{{ route('jobs.create') }}" class="page-scroll">Ажил нэмэх</a></li>
+                    <li><a href="{{ route('jobs.index') }}" class="page-scroll">Ажил хайх</a></li>
+                    <li><a href="{{ route('jobs.create') }}" class="page-scroll">Ажил олгох</a></li>
                     <li><a href="{{ route('jobs.create') }}" class="page-scroll">Сургалт</a></li>
                     <li><a href="{{ route('profile.index', $user->username) }}" class="page-scroll">{{ $user->username }}</a></li>
                     <li><a href="{{ url('/logout') }}" class="page-scroll"><i class="fa fa-btn fa-sign-out"></i>Гарах</a></li>
