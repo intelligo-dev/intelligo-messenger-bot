@@ -21,7 +21,7 @@ a {
     opacity: 0.9; 
     display: none;} 
     #logo-a{
-    	padding: 2% 5% ;
+    	display: none;
     }
 }
 
@@ -51,3 +51,7 @@ a {
 	border-right: 1px solid #dce0e0;
 
 }
+#Flyers-ShowAll-Container h3{
+	padding:1.5% ; 
+}
+

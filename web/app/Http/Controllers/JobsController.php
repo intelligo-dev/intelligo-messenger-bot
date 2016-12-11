@@ -21,7 +21,7 @@ class JobsController extends Controller {
     }
 
     public function index() {
-        $job = Job::latest('created_at')->paginate(15);
+        $job = Job::latest('created_at')->paginate(4);
 
         $publicUser = User::all();
 
@@ -34,7 +34,7 @@ class JobsController extends Controller {
 
     public function home() {
 
-        $job = Job::latest('created_at')->paginate(15);
+        $job = Job::latest('created_at')->paginate(4);
 
         $publicUser = User::all();
 

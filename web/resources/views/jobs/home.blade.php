@@ -4,7 +4,7 @@
 
     @include('pages.partials.navigation')
 
-    <div class="" style="padding-bottom: 0;">
+    <div class="container" style="padding-bottom: 0;">
 
 
         <div class="col-md-12 job-trend-service" id="Flyers-ShowAll-Container">
