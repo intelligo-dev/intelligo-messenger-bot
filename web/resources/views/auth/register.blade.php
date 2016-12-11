@@ -10,9 +10,7 @@
                 <div class="panel panel-default" id="Login-Register-Panel">
                     <div class="panel-heading">Бүртгүүлэх</div>
                     <div class="panel-body">
-                        <h2 class="ui center aligned icon header">
-                            <i class="circular sign in icon"></i>
-                        </h2>
+                        
                         <form class="form-horizontal" role="form" method="POST" action="{{ route('auth.register') }}">
                             {!! csrf_field() !!}
 

@@ -18,7 +18,8 @@ a {
 @media screen and (min-width: 100px) and (max-width: 768px) {
   #map_home {
     height: 600px;
-    opacity: 0.9; } }
+    opacity: 0.9; 
+    display: none;} }
 
 #GoogleMaps-Content-Title {
   margin: 4px;

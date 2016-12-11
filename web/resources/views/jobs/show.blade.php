@@ -30,7 +30,7 @@
                                 <i class="thumbs outline up icon large"></i> {{ $job->likes->count() }}
                             </a>
                             <div id="popup1" class="ui custom basic popup">
-                                Like Travel Flyer
+                                Таалагдсан
                             </div>
                     @endif
                 </div>
@@ -85,11 +85,17 @@
 
         @if ($user && $user->owns($job))
             @if ($job->photos->count() > 36)
-               <p>Cannot upload more than 36 photos for one Travel Flyer. Delete some photos to upload photos.</p>
+               <p>Хамгийн ихдээ 36 зураг оруулах боломжтой.</p>
             @else
+<<<<<<< HEAD
             <div class="col-md-6" id="ProfileFormUpload">
                 <h5 class="text-center">Upload Travel Flyers:</h5>
                 <p>Upload 12 photos at a time only.</p>
+=======
+            <div class="col-md-12" id="ProfileFormUpload">
+                <h5 class="text-center">Дэлгэрэнгүй зурагнууд:</h5>
+                <p>.</p>
+>>>>>>> 6755f81ec675af2eecc052cbc17f389cba42aa81
                 <form action="/travel/{{ $job->title }}/photo" method="post" class="dropzone" id="addFlyerPhotosForm" enctype="multipart/form-data">
                     {{ csrf_field() }}
                 </form>

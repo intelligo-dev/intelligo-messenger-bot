@@ -53,7 +53,7 @@
 
     <div class="" style="padding-bottom: 0;">
 
-        <div class="col-md-6" style="padding: 0;">
+        <div class="col-md-8" style="padding: 0;">
          {!! Form::open(array('url' => 'jobs/search')) !!}
             <div class="typeahead-field">
                 <span class="typeahead-query">
@@ -65,20 +65,14 @@
             </div>
         </div>
 
-        <div class="col-md-6" id="Flyers-ShowAll-Container">
-
+        <div class="col-md-4 job-list" id="Flyers-ShowAll-Container">
+       
             @foreach($job as $jobs)
-                <div class="col-sm-6 col-md-6">
+                <div class="col-sm-12 col-md-12">
                     <div class="row">
-                        <div class="ui link cards" id="Travel-Flyer-Display-Cards">
-                            <div class="card" id="Flyer-Card">
-                                <div class="image">
-                                    <a href="{{ route('jobs.show', $jobs->title) }}">
-                                        @foreach ($jobs->bannerPhotos as $photo)
-                                            <img src="/{{ $photo->thumbnail_path }}" alt="{{ $jobs->owner->username }}" data-id="{{ $photo->id }}">
-                                        @endforeach
-                                    </a>
-                                </div>
+                        <div class="ui link cards job-box-container" id="Travel-Flyer-Display-Cards">
+                            <div class="card job-box" id="Flyer-Card ">
+                                
                                 <div class="content">
                                     <a href="{{ route('jobs.show', $jobs->title) }}">
                                         <h4 class="ui header"> {{ str_limit($jobs->title, $limit = 80, $end = '...') }}</h4>
@@ -115,6 +109,7 @@
                     </div>
                 </div>
             @endforeach
+
         </div>
 
 
@@ -130,7 +125,7 @@
                 jQuery(function($) {
                 // Asynchronously Load the map API
                 var script = document.createElement('script');
-                script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAV4KOI-DE4LL2a9I7ySS3v1Fru0R8y60I&callback=initAutocomplete";
+                script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyC4ei07IEdFWkazWy95Gyt4UcUY7ExDJLU&callback=initAutocomplete";
                 document.body.appendChild(script);
             });
 

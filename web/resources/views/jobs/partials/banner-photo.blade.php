@@ -18,7 +18,7 @@
 
 @if ($user && $user->owns($job))
     <div class="col-md-12" id="JobBannerFormUpload">
-        <h5 class="text-center">Сурталчилгааны зураг:</h5>
+        <h5 class="text-center">Зураг:</h5>
         <form action="/{{ $job->title }}/banner" method="post" class="dropzone" id="addBannerForm" enctype="multipart/form-data">
             {{ csrf_field() }}
         </form>

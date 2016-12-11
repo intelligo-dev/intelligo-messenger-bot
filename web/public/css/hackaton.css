@@ -1,3 +1,25 @@
 a {
 	
 }
+
+.job-box{
+	width: 100% !important;
+	height: auto 100% !important;
+}
+
+.job-list{
+	height: 850px;
+	overflow-y:scroll;
+}
+
+.job-box-container{
+	height: 250px !important;
+}
+@media screen and (min-width: 100px) and (max-width: 768px) {
+  #map_home {
+    height: 600px;
+    opacity: 0.9; 
+    display: none;} }
+
+
+

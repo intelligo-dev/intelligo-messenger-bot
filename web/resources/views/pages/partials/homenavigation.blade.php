@@ -11,7 +11,13 @@
             </button>
             <a class="navbar-brand" href="{{ url('/') }}">iHelp</a>
         </div>
-
+        {!! Form::open(array('url' => 'jobs/search')) !!}
+            <div class="typeahead-field">
+                <span class="typeahead-query">
+                    {!! Form::text('keyword', null, array('id' => 'job-query', 'placeholder' => 'Ажил хайх...', 'autocomplete' =>'off')) !!}
+                </span>
+            </div>
+        {!! Form::close() !!}
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
