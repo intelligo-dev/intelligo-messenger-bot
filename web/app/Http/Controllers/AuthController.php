@@ -47,7 +47,7 @@ class AuthController extends Controller {
             'email' => $request->input('email'),
             'username' => $request->input('username'),
             'password' => bcrypt($request->input('password')),
-            'verified' => 0,
+            'verified' => 1,
             'points'
         ]);
 

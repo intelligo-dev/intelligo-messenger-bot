@@ -7,10 +7,10 @@ function initAutocomplete() {
 
     var map = new google.maps.Map(document.getElementById('map'), {
         center: {
-            lat: 13.8688,
-            lng: 5.2195
+            lat: 47.9216185,
+            lng: 106.92236560000003
         },
-        zoom: 2,
+        zoom: 14,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     });
 

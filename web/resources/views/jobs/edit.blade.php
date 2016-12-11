@@ -33,8 +33,8 @@
 
                 <div class="col-md-6">
                     <div class="form-group{{ $errors->has('excerpt') ? ' has-error' : '' }}">
-                        <label for="excerpt">Тайлбар:</label>
-                        <input type="text" name="excerpt" id="excerpt" class="form-control" value="{{ old('excerpt') ? : $job->excerpt }}" placeholder="Тайлбар...">
+                        <label for="excerpt">Цалин:</label>
+                        <input type="text" name="excerpt" id="excerpt" class="form-control" value="{{ old('excerpt') ? : $job->excerpt }}" placeholder="Цалин дунджаар...">
                         @if($errors->has('excerpt'))
                             <span class="help-block">{{ $errors->first('excerpt') }}</span>
                         @endif
