@@ -1,3 +1,17 @@
 a {
 	
 }
+
+.job-box{
+	width: 100% !important;
+	height: auto 100% !important;
+}
+
+.job-list{
+	height: 850px;
+	overflow-y:scroll;
+}
+
+.job-box-container{
+	height: 250px !important;
+}
