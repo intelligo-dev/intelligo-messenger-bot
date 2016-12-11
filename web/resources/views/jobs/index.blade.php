@@ -3,17 +3,65 @@
 @section('content')
 
     @include('pages.partials.navigation')
+<nav>
+    <div class="container dedzai">
+        <form>
+            <ul style="    margin: 0 0 -10px; text-align: center;">
+                <li style="list-style-type:none">
+                    <div class="form-group sell-type filter-job">
+                        <div class="btn-group ">
+
+                        
+
+                        <div class="arzaidropdown">
+                            <select class="btn btn-ubhome dada">
+                          <option value="volvo">Volvo</option>
+                          <option value="saab">Saab</option>
+                          <option value="mercedes">Mercedes</option>
+                          <option value="audi">Audi</option>
+                             </select>
+                       </div>
+                         <div class="arzaidropdown">
+                            <select class="btn btn-ubhome dada">
+                          <option value="volvo">Volvo</option>
+                          <option value="saab">Saab</option>
+                          <option value="mercedes">Mercedes</option>
+                          <option value="audi">Audi</option>
+                             </select>
+                       </div>
+                         <div class="arzaidropdown">
+                            <select class="btn btn-ubhome dada">
+                          <option value="volvo">Volvo</option>
+                          <option value="saab">Saab</option>
+                          <option value="mercedes">Mercedes</option>
+                          <option value="audi">Audi</option>
+                             </select>
+                       </div>
+                       <div class="arzaidropdown">
+                         
+    
+
+
+        
+     
+ 
+
+                       </div>
+                      
+                       
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </form>
+        
+    </div>
+</nav>
 
     <div class="" style="padding-bottom: 0;">
 
-        <div class="col-md-8 map-container" style="padding: 0;">
-         {!! Form::open(array('url' => 'jobs/search')) !!}
-            <div class="typeahead-field">
-                <span class="typeahead-query">
-                    {!! Form::text('keyword', null, array('id' => 'job-query', 'placeholder' => 'Ажил хайх...', 'autocomplete' =>'off')) !!}
-                </span>
-            </div>
-            {!! Form::close() !!}
+        <div class="col-md-8" style="padding: 0;">
+     
             <div id="map_home">
             </div>
         </div>
@@ -73,6 +121,7 @@
 
 
 @section('scripts.footer')
+
     <script type="application/javascript" src="{{ asset('web/public/js/libs/typeahead.js') }}"></script>
     <script>
                 jQuery(function($) {
@@ -181,56 +230,6 @@
                     // Automatically center the map fitting all markers on the screen
                     map.fitBounds(bounds);
                 }
-
-                // Override our map zoom level once our fitBounds function runs (Make sure it only runs once)
-                var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
-                    this.setZoom(14);
-                    google.maps.event.removeListener(boundsListener);
-                });
-
-            }
-
-        $('#job-query').typeahead({
-            minLength: 1,
-            source: {
-                data: [
-                    @foreach($job as $jobs)
-                         "{{ $jobs->title }}",
-                    @endforeach
-                ]
-            }
-        });
-    </script>
-@stop
-
- multiple markers on a map
-                var infoWindow = new google.maps.InfoWindow(), marker, i;
-
-                var image = '/web/public/css/icon.png';
-
-                // Loop through our array of markers & place each one on the map
-                for( i = 0; i < markers.length; i++ ) {
-                    var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
-                    bounds.extend(position);
-                    marker = new google.maps.Marker({
-                        position: position,
-                        map: map,
-                        title: markers[i][0],
-                        animation: google.maps.Animation.DROP,
-                        icon: image
-                    });
-
-                    // Allow each marker to have an info window
-                    google.maps.event.addListener(marker, 'click', (function(marker, i) {
-                        return function() {
-                            infoWindow.setContent(infoWindowContent[i][0]);
-                            infoWindow.open(map, marker);
-                        }
-                    })(marker, i));
-
-                    // Automatically center the map fitting all markers on the screen
-                    map.fitBounds(bounds);
-                }
                 
                 // Override our map zoom level once our fitBounds function runs (Make sure it only runs once)
                 var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
@@ -254,4 +253,3 @@
 
    
 @stop
-

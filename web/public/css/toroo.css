@@ -1,1 +1,11 @@
-.job-trend-service
+.header-search form .typehead-field .typehead-query input {
+	border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+.typeahead-field input {
+	border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
