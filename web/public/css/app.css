@@ -1,8 +1,9 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400);
 @import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i");
 body, html {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto', sans-serif !important;
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
   color: #5a5a5a; }
@@ -18,14 +19,13 @@ a {
 @media screen and (min-width: 100px) and (max-width: 768px) {
   #map_home {
     height: 600px;
-    opacity: 0.9; 
-    display: none;} }
+    opacity: 0.9; } }
 
 #GoogleMaps-Content-Title {
   margin: 4px;
   width: 160px;
   color: black;
-  font-family: "Open Sans",Helvetica,Arial,sans-serif;
+  font-family: 'Roboto', sans-serif !important;
   font-weight: 400; }
 
 .section-title hr {
@@ -161,7 +161,7 @@ ul, ol {
   display: block;
   height: 330px;
   font-size: 16px;
-  font-family: "Open Sans",Helvetica,Arial,sans-serif;
+  font-family: 'Roboto', sans-serif !important;
   color: #575a5b;
   font-weight: 300;
   cursor: default; }
@@ -173,7 +173,7 @@ ul, ol {
   display: block;
   height: 330px;
   transition: 0.9s;
-  font-family: "Open Sans",Helvetica,Arial,sans-serif;
+  font-family: 'Roboto', sans-serif !important;
   color: white;
   font-weight: 300; }
 
@@ -199,7 +199,7 @@ img {
   padding-top: 2%;
   font-size: 18px;
   color: white;
-  font-family: 'Lato', sans-serif; }
+  font-family: 'Roboto', sans-serif !important; }
 
 .img-wrap {
   position: relative;
@@ -234,7 +234,7 @@ img {
   padding-bottom: 5px; }
 
 #Profile-Description {
-  font-family: "Open Sans",Helvetica,Arial,sans-serif;
+  font-family: 'Roboto', sans-serif !important;
   color: #575a5b;
   font-weight: 400;
   padding-bottom: 25px;
@@ -274,7 +274,7 @@ img {
 #Points-Badges {
   padding-top: 46px;
   padding-bottom: 15px;
-  font-family: "Open Sans",Helvetica,Arial,sans-serif;
+  font-family: 'Roboto', sans-serif !important;
   color: #575a5b;
   font-weight: 300;
   line-height: 1.4;
@@ -283,14 +283,14 @@ img {
 #Travel-Badges {
   margin-top: 46px;
   padding-bottom: 15px;
-  font-family: "Open Sans",Helvetica,Arial,sans-serif;
+  font-family: 'Roboto', sans-serif !important;
   color: #575a5b;
   font-weight: 300;
   line-height: 1.4;
   text-align: center; }
 
 #badges-description {
-  font-family: "Open Sans",Helvetica,Arial,sans-serif;
+  font-family: 'Roboto', sans-serif !important;
   color: #575a5b;
   font-weight: 400;
   text-align: center;
@@ -380,7 +380,7 @@ img {
 #Flyer-Title {
   padding-top: 5%;
   font-size: 24px;
-  font-family: 'Roboto', sans-serif; }
+  font-family: 'Roboto', sans-serif !important; }
 
 #Flyer-Description {
   padding: 1.5%;
@@ -388,10 +388,10 @@ img {
   opacity: 0.9;
   margin-bottom: 5%;
   font-size: 18px;
-  font-family: 'Roboto', sans-serif; }
+  font-family: 'Roboto', sans-serif !important; }
 
 #Flyer-Sub-Description {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif !important;
   font-size: 16px;
   opacity: 0.9;
   text-transform: uppercase; }

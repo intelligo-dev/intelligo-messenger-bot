@@ -45,9 +45,20 @@
                              </select>
                        </div>
                        <div class="arzaidropdown">
+<<<<<<< HEAD
                         <label class="btn btn-ubhome " >
                        <a href=""> <i class="plus icon"></i>Дэлгэрэнгүй хайлт</a>
                            </label>
+=======
+                         
+    
+
+
+        
+     
+ 
+
+>>>>>>> 4051a2cf4934069b9ae086452ba5d74e5dbe8dc4
                        </div>
                        
                       
@@ -64,13 +75,7 @@
     <div class="" style="padding-bottom: 0;">
 
         <div class="col-md-8" style="padding: 0;">
-         {!! Form::open(array('url' => 'jobs/search')) !!}
-            <div class="typeahead-field">
-                <span class="typeahead-query">
-                    {!! Form::text('keyword', null, array('id' => 'job-query', 'placeholder' => 'Ажил хайх...', 'autocomplete' =>'off')) !!}
-                </span>
-            </div>
-            {!! Form::close() !!}
+     
             <div id="map_home">
             </div>
         </div>
@@ -262,4 +267,3 @@
 
    
 @stop
-

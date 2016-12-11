@@ -19,7 +19,35 @@ a {
   #map_home {
     height: 600px;
     opacity: 0.9; 
-    display: none;} }
+    display: none;} 
+    #logo-a{
+    	padding: 2% 5% ;
+    }
+}
+
+.hack-menu{
+	background: #fff !important;
+	border-bottom: 1px solid #dce0e0;
+	box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
 
 
+.logo-img{
+	width: 70px;
+}
+#logo-a{
+	padding: 10% 10% ;
+}
 
+.header-search{
+	padding-top: 1%;
+	width: 50%;
+}
+
+.navbar-nav > li > a{
+	color: black !important;
+}
+#tf-menu .navbar-header{
+	border-right: 1px solid #dce0e0;
+
+}
