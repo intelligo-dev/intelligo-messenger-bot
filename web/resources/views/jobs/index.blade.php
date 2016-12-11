@@ -45,11 +45,11 @@
                              </select>
                        </div>
                        <div class="arzaidropdown">
-<<<<<<< HEAD
+
                         <label class="btn btn-ubhome " >
                        <a href=""> <i class="plus icon"></i>Дэлгэрэнгүй хайлт</a>
                            </label>
-=======
+
                          
     
 
@@ -58,7 +58,7 @@
      
  
 
->>>>>>> 4051a2cf4934069b9ae086452ba5d74e5dbe8dc4
+
                        </div>
                        
                       
