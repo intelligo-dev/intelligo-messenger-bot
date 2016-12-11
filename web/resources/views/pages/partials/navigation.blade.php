@@ -17,7 +17,7 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="navbar-left header-search">
+            <ul class="navbar-left header-search" style="">
                 {!! Form::open(array('url' => 'jobs/search')) !!}
                 <div class="typeahead-field">
                 <i class="fa fa-search" aria-hidden="true" style="padding-top: 9px;"></i>

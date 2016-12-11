@@ -38,42 +38,8 @@ public class MainActivity extends AppCompatActivity {
         myBlogWeb.getSettings().setJavaScriptEnabled(true);
         cd = new ConnectionDetector(this);
         isInternetPresent = cd.isConnectingToInternet();
-        if (isInternetPresent) {
-            myBlogWeb.setWebViewClient(new WebViewClient() {
 
-                public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                    Log.i("WebContent", "Navigating to " + url);
-                    view.loadUrl(url);
-                    return true;
-                }
-
-                public void onPageFinished(WebView view, String url) {
-                    Log.i("WebContent", "Finished loading of " + url);
-                }
-
-                public void onReceivedError(WebView view, int errorCode, String errorDescription, String errorUrl) {
-                    Log.e("Programmer", "ERR AT   -> " + errorUrl);
-                    Log.e("WebContent", "ERR CODE -> " + errorCode);
-                    Log.e("WebContent", "ERR MSG  -> " + errorDescription);
-                    //new Spawner().spawnView(WebContent.this, Offline.class); //TODO: Replace the offline-activity with an server-offline-activity
-                }
-            });
-            myBlogWeb.loadUrl("http://tortuvshin.github.io");
-
-        } else {
-            new android.app.AlertDialog.Builder(this,R.style.AppTheme)
-                    .setIcon(R.drawable.fail)
-                    .setTitle("Интернэт холболтоо шалгана уу !!!")
-                    .setMessage("Интернэтэд холбогдоогүй байна !!!")
-                    .setPositiveButton("Тийм", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            finish();
-                        }
-                    })
-                    .setNegativeButton("Үгүй", null)
-                    .show();
-        }
+        myBlogWeb.loadUrl("http://hackaton.toroo.info");
     }
 
     @Override
