@@ -40,7 +40,7 @@
 
             <p class="text-center" id="Flyer-Title">{{ $job->title }}</p>
          
-            <p class="text-center"><i>{{ $job->excerpt }} une opulna</i></p>
+            <p class="text-center"><i>{{ $job->excerpt }} төргөг</i></p>
 
             <div id="Flyer-Description">
                 {!! nl2br( $job->description) !!}
@@ -87,15 +87,7 @@
             @if ($job->photos->count() > 36)
                <p>Хамгийн ихдээ 36 зураг оруулах боломжтой.</p>
             @else
-<<<<<<< HEAD
             <div class="col-md-6" id="ProfileFormUpload">
-                <h5 class="text-center">Upload Travel Flyers:</h5>
-                <p>Upload 12 photos at a time only.</p>
-=======
-            <div class="col-md-12" id="ProfileFormUpload">
-                <h5 class="text-center">Дэлгэрэнгүй зурагнууд:</h5>
-                <p>.</p>
->>>>>>> 6755f81ec675af2eecc052cbc17f389cba42aa81
                 <form action="/travel/{{ $job->title }}/photo" method="post" class="dropzone" id="addFlyerPhotosForm" enctype="multipart/form-data">
                     {{ csrf_field() }}
                 </form>

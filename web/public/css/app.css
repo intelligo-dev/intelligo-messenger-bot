@@ -1,6 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400);
 @import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url("https://fonts.googleapis.com/css?family=Roboto:300");
 body, html {
   font-family: 'Lato', sans-serif;
   text-rendering: optimizeLegibility !important;
@@ -18,14 +19,13 @@ a {
 @media screen and (min-width: 100px) and (max-width: 768px) {
   #map_home {
     height: 600px;
-    opacity: 0.9; 
-    display: none;} }
+    opacity: 0.9; } }
 
 #GoogleMaps-Content-Title {
   margin: 4px;
   width: 160px;
   color: black;
-  font-family: "Open Sans",Helvetica,Arial,sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 400; }
 
 .section-title hr {
