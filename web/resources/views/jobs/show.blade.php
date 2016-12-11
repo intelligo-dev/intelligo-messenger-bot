@@ -6,9 +6,9 @@
 
     <div class="container" style="background-color: #fafafa;">
 
-        <div class="col-md-12">
+        <div class="col-md-6">
 
-            @include('jobs.partials.banner-photo')
+           
             <br>
 
             <div class="col-md-12">
@@ -39,8 +39,8 @@
             <br><br>
 
             <p class="text-center" id="Flyer-Title">{{ $job->title }}</p>
-            <p class="text-center" id="Flyer-Sub-Description"><i class="marker icon"></i><span id="Flyer-Sub">{{ $job->location }}</span></p>
-            <p class="text-center"><i>{{ $job->excerpt }}</i></p>
+         
+            <p class="text-center"><i>{{ $job->excerpt }} une opulna</i></p>
 
             <div id="Flyer-Description">
                 {!! nl2br( $job->description) !!}
@@ -74,13 +74,28 @@
 
         <br>
 
+
+        <div class="col-md-6">
+            <br><br>
+            <div id="map"></div>
+            <br><br>
+            <a href="{{ route('jobs.index') }}"><button class="ui inverted green button">Бүх ажлын санал</button></a>
+            <br><br><hr>
+        </div>
+
         @if ($user && $user->owns($job))
             @if ($job->photos->count() > 36)
                <p>Хамгийн ихдээ 36 зураг оруулах боломжтой.</p>
             @else
+<<<<<<< HEAD
+            <div class="col-md-6" id="ProfileFormUpload">
+                <h5 class="text-center">Upload Travel Flyers:</h5>
+                <p>Upload 12 photos at a time only.</p>
+=======
             <div class="col-md-12" id="ProfileFormUpload">
                 <h5 class="text-center">Дэлгэрэнгүй зурагнууд:</h5>
                 <p>.</p>
+>>>>>>> 6755f81ec675af2eecc052cbc17f389cba42aa81
                 <form action="/travel/{{ $job->title }}/photo" method="post" class="dropzone" id="addFlyerPhotosForm" enctype="multipart/form-data">
                     {{ csrf_field() }}
                 </form>
@@ -88,14 +103,6 @@
             </div>
             @endif
         @endif
-
-        <div class="col-md-12">
-            <br><br>
-            <div id="map"></div>
-            <br><br>
-            <a href="{{ route('jobs.index') }}"><button class="ui inverted green button">Бүх ажлын санал</button></a>
-            <br><br><hr>
-        </div>
 
         @include('jobs.partials.job-comments')
 

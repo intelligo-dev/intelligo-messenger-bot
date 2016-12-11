@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="{{ URL::asset('web/public/css/toroo.css') }}">
     <link rel="stylesheet" type="text/css" href="/web/semantic/dist/semantic.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.2.0/dropzone.css">
+    
 
 </head>
 

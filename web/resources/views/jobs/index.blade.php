@@ -3,6 +3,53 @@
 @section('content')
 
     @include('pages.partials.navigation')
+<nav>
+    <div class="container dedzai">
+        <form>
+            <ul style="    margin: 0 0 -10px; text-align: center;">
+                <li style="list-style-type:none">
+                    <div class="form-group sell-type filter-job">
+                        <div class="btn-group ">
+
+                        
+
+                        <div class="arzaidropdown">
+                            <select class="btn btn-ubhome dada">
+                          <option value="volvo">Volvo</option>
+                          <option value="saab">Saab</option>
+                          <option value="mercedes">Mercedes</option>
+                          <option value="audi">Audi</option>
+                             </select>
+                       </div>
+                         <div class="arzaidropdown">
+                            <select class="btn btn-ubhome dada">
+                          <option value="volvo">Volvo</option>
+                          <option value="saab">Saab</option>
+                          <option value="mercedes">Mercedes</option>
+                          <option value="audi">Audi</option>
+                             </select>
+                       </div>
+                         <div class="arzaidropdown">
+                            <select class="btn btn-ubhome dada">
+                          <option value="volvo">Volvo</option>
+                          <option value="saab">Saab</option>
+                          <option value="mercedes">Mercedes</option>
+                          <option value="audi">Audi</option>
+                             </select>
+                       </div>
+                       <div class="arzaidropdown">
+                           
+                       </div>
+                      
+                       
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </form>
+        
+    </div>
+</nav>
 
     <div class="" style="padding-bottom: 0;">
 
@@ -181,7 +228,7 @@
                     // Automatically center the map fitting all markers on the screen
                     map.fitBounds(bounds);
                 }
-
+                
                 // Override our map zoom level once our fitBounds function runs (Make sure it only runs once)
                 var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
                     this.setZoom(14);
@@ -201,5 +248,7 @@
             }
         });
     </script>
+
+   
 @stop
 
