@@ -6,9 +6,9 @@
 
     <div class="container" style="background-color: #fafafa;">
 
-        <div class="col-md-12">
+        <div class="col-md-6">
 
-            @include('jobs.partials.banner-photo')
+           
             <br>
 
             <div class="col-md-12">
@@ -39,8 +39,8 @@
             <br><br>
 
             <p class="text-center" id="Flyer-Title">{{ $job->title }}</p>
-            <p class="text-center" id="Flyer-Sub-Description"><i class="marker icon"></i><span id="Flyer-Sub">{{ $job->location }}</span></p>
-            <p class="text-center"><i>{{ $job->excerpt }}</i></p>
+         
+            <p class="text-center"><i>{{ $job->excerpt }} une opulna</i></p>
 
             <div id="Flyer-Description">
                 {!! nl2br( $job->description) !!}
@@ -74,11 +74,20 @@
 
         <br>
 
+
+        <div class="col-md-6">
+            <br><br>
+            <div id="map"></div>
+            <br><br>
+            <a href="{{ route('jobs.index') }}"><button class="ui inverted green button">Бүх ажлын санал</button></a>
+            <br><br><hr>
+        </div>
+
         @if ($user && $user->owns($job))
             @if ($job->photos->count() > 36)
                <p>Cannot upload more than 36 photos for one Travel Flyer. Delete some photos to upload photos.</p>
             @else
-            <div class="col-md-12" id="ProfileFormUpload">
+            <div class="col-md-6" id="ProfileFormUpload">
                 <h5 class="text-center">Upload Travel Flyers:</h5>
                 <p>Upload 12 photos at a time only.</p>
                 <form action="/travel/{{ $job->title }}/photo" method="post" class="dropzone" id="addFlyerPhotosForm" enctype="multipart/form-data">
@@ -88,14 +97,6 @@
             </div>
             @endif
         @endif
-
-        <div class="col-md-12">
-            <br><br>
-            <div id="map"></div>
-            <br><br>
-            <a href="{{ route('jobs.index') }}"><button class="ui inverted green button">Бүх ажлын санал</button></a>
-            <br><br><hr>
-        </div>
 
         @include('jobs.partials.job-comments')
 
