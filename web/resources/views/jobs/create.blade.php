@@ -32,8 +32,8 @@
 
             <div class="col-md-6">
                 <div class="form-group{{ $errors->has('excerpt') ? ' has-error' : '' }}">
-                    <label for="excerpt">Тайлбар:</label>
-                    <input type="text" name="excerpt" id="excerpt" class="form-control" value="{{ old('excerpt') }}" placeholder="Юу хийлгэх гэж байгаа...">
+                    <label for="excerpt">Цалин:</label>
+                    <input type="text" name="excerpt" id="excerpt" class="form-control" value="{{ old('excerpt') }}" placeholder="Цалингийн хэмжээ дунджаар...">
                     @if($errors->has('excerpt'))
                         <span class="help-block">{{ $errors->first('excerpt') }}</span>
                     @endif
@@ -56,7 +56,7 @@
 
                 <div class="col-md-12">
                     <div class="form-group{{ $errors->has('location') ? ' has-error' : '' }}">
-                        <label>Хаан хийлгэх гэж байгаагаа оруул:</label>
+                        <label>Хаана хийлгэх гэж байгаагаа оруул:</label>
                         <input type="text" name="location" class="form-control" id="pac-input" placeholder="Байршил хайх..." value="{{ old('location') }}" >
                         @if($errors->has('location'))
                             <span class="help-block">{{ $errors->first('location') }}</span>
