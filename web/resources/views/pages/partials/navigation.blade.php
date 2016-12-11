@@ -14,7 +14,17 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="navbar-left">
+                {!! Form::open(array('url' => 'jobs/search')) !!}
+                <div class="typeahead-field">
+                    <span class="typeahead-query">
+                        {!! Form::text('keyword', null, array('id' => 'job-query', 'placeholder' => 'Ажил хайх...', 'autocomplete' =>'off')) !!}
+                    </span>
+                </div>
+                {!! Form::close() !!}
+            </ul>
             <ul class="nav navbar-nav navbar-right">
+
                 @if (!$signedIn)
                     <li><a href="{{ url('/') }}" class="page-scroll">Нүүр</a></li>
                     <li><a href="{{ route('jobs.index') }}" class="page-scroll">Ажил</a></li>

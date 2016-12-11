@@ -7,7 +7,7 @@
     <div class="" style="padding-bottom: 0;">
 
         <div class="col-md-6" style="padding: 0;">
-         {!! Form::open(array('url' => 'jobs/search')) !!}
+            {!! Form::open(array('url' => 'jobs/search')) !!}
             <div class="typeahead-field">
                 <span class="typeahead-query">
                     {!! Form::text('keyword', null, array('id' => 'job-query', 'placeholder' => 'Ажил хайх...', 'autocomplete' =>'off')) !!}
@@ -17,7 +17,7 @@
             
         </div>
 
-        <div class="col-md-12" id="Flyers-ShowAll-Container">
+        <div class="col-md-12 job-trend-service" id="Flyers-ShowAll-Container">
             <h3>Санал болгох</h3>
             @foreach($job as $jobs)
                 <div class="col-sm-6 col-md-3">
