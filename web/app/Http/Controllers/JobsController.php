@@ -16,7 +16,7 @@ use App\Http\Requests\JobsRequest;
 class JobsController extends Controller {
 
     public function __construct() {
-        $this->middleware('auth', ['except' => ['index', 'show', 'search']]);
+        $this->middleware('auth', ['except' => ['index', 'home', 'show', 'search']]);
         parent::__construct();
     }
 
@@ -32,6 +32,15 @@ class JobsController extends Controller {
         return view('jobs.create');
     }
 
+    public function home() {
+
+        $job = Job::latest('created_at')->paginate(15);
+
+        $publicUser = User::all();
+
+        return view('jobs.home', compact('job', 'publicUser'));
+    }
+    
     public function store(JobsRequest $request) {
 
         $job = $this->user->publish(new Job($request->all()));

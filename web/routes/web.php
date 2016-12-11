@@ -3,8 +3,6 @@
 
 Route::group(['middleware' => ['web']], function () {
 
-    Route::get('/', 'PagesController@index');
-
     Route::get('register/confirm/{token}', 'AuthController@confirmEmail');
 
     Route::get('/register', [
@@ -96,8 +94,9 @@ Route::group(['middleware' => ['web']], function () {
 
 Route::group(['middleware' => ['web']], function () {
 
-    /** Resource Route For Travel Jobs */
     Route::resource('jobs', 'JobsController');
+
+    Route::get('/', 'JobsController@home');
 
     /** Show a Job. **/
     Route::get('{title}', 'JobsController@show');
