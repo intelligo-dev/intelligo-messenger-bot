@@ -54,4 +54,14 @@ a {
 #Flyers-ShowAll-Container h3{
 	padding:1.5% ; 
 }
+ .btn-job{
+ 	color: black !important;
+ 	border: 1px solid black !important;
+ 	background: white !important;
 
+ }
+.btn-job:hover{
+	color: white !important;
+	background: #fc6b2d !important;
+	border:none;
+}

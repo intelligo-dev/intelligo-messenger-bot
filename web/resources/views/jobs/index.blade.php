@@ -12,57 +12,54 @@
                         <div class="btn-group ">
 
                         <div class="arzaidropdown">
-                         <label class="btn btn-ubhome dada" ><i class="child icon"> </i> songolt <input type="checkbox" name="vehicle" value="Bike"> </label>
-    
-                       </div>
-                       <div class="arzaidropdown">
-                         <label class="btn btn-ubhome dada" ><i class="child icon"> </i>songolt<input type="checkbox" name="vehicle" value="Bike"> </label>
-    
+                            <select class="btn btn-ubhome dada" value="Байршил" name="Байршил">
+                          <option value="volvo">Улаанбаатар</option>
+                          <option value="saab">Дархан</option>
+                          <option value="mercedes">Эрдэнэт</option>
+                          <option value="audi">Төв аймаг</option>
+                             </select>
                        </div>
 
                         <div class="arzaidropdown">
                             <select class="btn btn-ubhome dada">
-                          <option value="volvo">Volvo</option>
-                          <option value="saab">Saab</option>
-                          <option value="mercedes">Mercedes</option>
-                          <option value="audi">Audi</option>
+                          <option value="volvo">Гэрийн ажил</option>
+                          <option value="saab">Үйлчилгээ</option>
+                          <option value="mercedes">Гэрийн багш</option>
+                          <option value="audi">Суртачилгаа</option>
+                          <option value="audi">Хүүхэд харах</option>
+                          <option value="audi">Технологи</option>
                              </select>
                        </div>
+                         
                          <div class="arzaidropdown">
                             <select class="btn btn-ubhome dada">
-                          <option value="volvo">Volvo</option>
-                          <option value="saab">Saab</option>
-                          <option value="mercedes">Mercedes</option>
-                          <option value="audi">Audi</option>
+                          <option value="volvo">10'000</option>
+                          <option value="saab">20'000</option>
+                          <option value="mercedes">30'000</option>
+                          <option value="audi">40'000</option>
+                             </select> -
+                             <select class="btn btn-ubhome dada">
+                          <option value="volvo">20'000</option>
+                          <option value="saab">30'000</option>
+                          <option value="mercedes">40'000</option>
+                          <option value="audi">50'000</option>
                              </select>
+                       </div> 
+                       
+                       <div class="arzaidropdown">
+                         <label class="btn btn-ubhome dada" ><i class="child icon"> </i> Яаралтай <input type="checkbox" name="vehicle" value="Bike"> </label>
+    
                        </div>
-                         <div class="arzaidropdown">
-                            <select class="btn btn-ubhome dada">
-                          <option value="volvo">Volvo</option>
-                          <option value="saab">Saab</option>
-                          <option value="mercedes">Mercedes</option>
-                          <option value="audi">Audi</option>
-                             </select>
+                       <div class="arzaidropdown">
+                         <label class="btn btn-ubhome dada" ><i class="child icon"> </i>Мэргэжлийн <input type="checkbox" name="vehicle" value="Bike"> </label>
+    
                        </div>
                        <div class="arzaidropdown">
 
                         <label class="btn btn-ubhome " >
                        <a href=""> <i class="plus icon"></i>Дэлгэрэнгүй хайлт</a>
                            </label>
-
-                         
-    
-
-
-        
-     
- 
-
-
                        </div>
-                       
-                      
-                       
                         </div>
                     </div>
                 </li>

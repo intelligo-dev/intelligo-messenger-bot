@@ -69,17 +69,21 @@
                     </div>
                 @endforeach
             </div>
+            <button class="ui inverted button btn-job">Хүсэлт илгээх</button>
+            <a href="{{ route('jobs.index') }}"><button class="ui inverted  button btn-job style="float:right" ">Бүх ажлын санал</button></a>
+
 
         </div>  <!-- close clo-md-12 -->
 
         <br>
 
 
+
+
         <div class="col-md-6">
             <br><br>
             <div id="map"></div>
             <br><br>
-            <a href="{{ route('jobs.index') }}"><button class="ui inverted green button">Бүх ажлын санал</button></a>
             <br><br><hr>
         </div>
 
