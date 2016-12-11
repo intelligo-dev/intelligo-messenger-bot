@@ -84,8 +84,6 @@
                     </div>
                 </div>
 
-                <p><i>Ажилтай холбоотой зураг</i></p>
-
                 <div class="col-md-12">
                     <hr>
                     <div class="form-group">
