@@ -94,7 +94,7 @@
 
 
 @section('scripts.footer')
-    <script type="application/javascript" src="{{ asset('src/public/js/libs/typeahead.js') }}"></script>
+    <script type="application/javascript" src="{{ asset('web/public/js/libs/typeahead.js') }}"></script>
     <script>
         $('#job-query').typeahead({
             minLength: 1,

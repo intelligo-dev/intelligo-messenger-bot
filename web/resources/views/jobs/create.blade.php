@@ -11,7 +11,7 @@
 
         <h2 class="ui center aligned icon header">
             <i class="circular travel icon"></i>
-            Шинэ ажил үүсгэх
+            Шинэ хямдрал үүсгэх
         </h2>
 
         <hr>
@@ -23,7 +23,7 @@
             <div class="col-md-6">
                 <div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">
                     <label for="title">Гарчиг:</label>
-                    <input type="text" name="title" id="title" class="form-control" value="{{ old('title') }}" placeholder="Ажлын байрны гарчиг...">
+                    <input type="text" name="title" id="title" class="form-control" value="{{ old('title') }}" placeholder="Сурталчилгааны гарчиг...">
                     @if($errors->has('title'))
                         <span class="help-block">{{ $errors->first('title') }}</span>
                     @endif
@@ -32,8 +32,8 @@
 
             <div class="col-md-6">
                 <div class="form-group{{ $errors->has('excerpt') ? ' has-error' : '' }}">
-                    <label for="excerpt">Цалин:</label>
-                    <input type="text" name="excerpt" id="excerpt" class="form-control" value="{{ old('excerpt') }}" placeholder="Цалингийн хэмжээ дунджаар...">
+                    <label for="excerpt">Хямдралын хувь:</label>
+                    <input type="text" name="excerpt" id="excerpt" class="form-control" value="{{ old('excerpt') }}" placeholder="Хямдралын хэмжээ дунджаар...">
                     @if($errors->has('excerpt'))
                         <span class="help-block">{{ $errors->first('excerpt') }}</span>
                     @endif
@@ -44,7 +44,7 @@
 
                 <div class="form-group{{ $errors->has('description') ? ' has-error' : '' }}">
                     <label for="description">Дэлгэрэнгүй тайлбар:</label>
-                    <textarea class="form-control" name="description" id="description" rows="10" placeholder="Яг юу хийлгэх гээд байгаагаа дэлгэрэнгүй биччих..." maxlength="3000">{{ old('description') }}</textarea>
+                    <textarea class="form-control" name="description" id="description" rows="10" placeholder="Дэлгэрэнгүй тайлбар..." maxlength="3000">{{ old('description') }}</textarea>
                     <div id="textarea_count"></div>
                     @if($errors->has('description'))
                         <span class="help-block">{{ $errors->first('description') }}</span>
@@ -56,7 +56,7 @@
 
                 <div class="col-md-12">
                     <div class="form-group{{ $errors->has('location') ? ' has-error' : '' }}">
-                        <label>Хаана хийлгэх гэж байгаагаа оруул:</label>
+                        <label>Байршил оруул:</label>
                         <input type="text" name="location" class="form-control" id="pac-input" placeholder="Байршил хайх..." value="{{ old('location') }}" >
                         @if($errors->has('location'))
                             <span class="help-block">{{ $errors->first('location') }}</span>

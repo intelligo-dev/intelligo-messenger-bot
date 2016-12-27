@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>iHelp</title>
+    <title>Сурталчилгаа</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name=description content="" />
     <meta name="keywords" content="" />
-    <meta name="author" content="iHelp team" />
+    <meta name="author" content="Сурталчилгаа" />
     <link rel="shortcut icon" href="{!! asset('/web/public/css/Travel-Share-Icon.png') !!}" />
 
     <!-- Fonts -->

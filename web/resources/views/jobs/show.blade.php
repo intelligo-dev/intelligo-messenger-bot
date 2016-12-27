@@ -76,10 +76,10 @@
 
         @if ($user && $user->owns($job))
             @if ($job->photos->count() > 36)
-               <p>Cannot upload more than 36 photos for one Travel Flyer. Delete some photos to upload photos.</p>
+               <p>.</p>
             @else
             <div class="col-md-12" id="ProfileFormUpload">
-                <h5 class="text-center">Upload Travel Flyers:</h5>
+                <h5 class="text-center">сурталчилгааны зураг:</h5>
                 <p>Upload 12 photos at a time only.</p>
                 <form action="/travel/{{ $job->title }}/photo" method="post" class="dropzone" id="addFlyerPhotosForm" enctype="multipart/form-data">
                     {{ csrf_field() }}
@@ -93,7 +93,7 @@
             <br><br>
             <div id="map"></div>
             <br><br>
-            <a href="{{ route('jobs.index') }}"><button class="ui inverted green button">Бүх ажлын санал</button></a>
+            <a href="{{ route('jobs.index') }}"><button class="ui inverted green button">Бүх хямдрал</button></a>
             <br><br><hr>
         </div>
 
@@ -105,9 +105,9 @@
 
 @section('scripts.footer')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.2.0/dropzone.js"></script>
-    <script type="application/javascript" src="{{ URL::asset('/src/public/js/dropzone.forms.js') }}"></script>
-    <script type="application/javascript" src="{{ URL::asset('/src/public/js/dropzone.job.js') }}"></script>
-    <script type="application/javascript" src="{{ URL::asset('src/public/js/lity.js') }}"></script>
+    <script type="application/javascript" src="{{ URL::asset('/web/public/js/dropzone.forms.js') }}"></script>
+    <script type="application/javascript" src="{{ URL::asset('/web/public/js/dropzone.job.js') }}"></script>
+    <script type="application/javascript" src="{{ URL::asset('/web/public/js/lity.js') }}"></script>
 
     <!--This uses FitText.js to resize the letters when on Mobile platforms.
         This is particularly used for the Flyers Description area. -->

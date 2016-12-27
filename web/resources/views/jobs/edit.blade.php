@@ -11,7 +11,7 @@
 
         <h2 class="ui center aligned icon header">
             <i class="circular travel icon"></i>
-            Оруулсан ажлаа засах
+            Оруулсан хямдралаа засах
         </h2>
 
         <hr>
@@ -33,8 +33,8 @@
 
                 <div class="col-md-6">
                     <div class="form-group{{ $errors->has('excerpt') ? ' has-error' : '' }}">
-                        <label for="excerpt">Цалин:</label>
-                        <input type="text" name="excerpt" id="excerpt" class="form-control" value="{{ old('excerpt') ? : $job->excerpt }}" placeholder="Цалин дунджаар...">
+                        <label for="excerpt">Хямдралын хувь:</label>
+                        <input type="text" name="excerpt" id="excerpt" class="form-control" value="{{ old('excerpt') ? : $job->excerpt }}" placeholder="Хямдралын хувь дунджаар...">
                         @if($errors->has('excerpt'))
                             <span class="help-block">{{ $errors->first('excerpt') }}</span>
                         @endif

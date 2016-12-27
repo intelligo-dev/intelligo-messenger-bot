@@ -100,5 +100,5 @@
 
 @section('scripts.footer')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.2.0/dropzone.js"></script>
-    <script type="application/javascript" src="{{ URL::asset('/src/public/js/dropzone.forms.js') }}"></script>
+    <script type="application/javascript" src="{{ URL::asset('/web/public/js/dropzone.forms.js') }}"></script>
 @stop
