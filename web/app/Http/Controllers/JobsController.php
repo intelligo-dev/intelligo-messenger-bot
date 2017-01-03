@@ -21,7 +21,7 @@ class JobsController extends Controller {
     }
 
     public function index() {
-        $job = Job::latest('created_at')->paginate(4);
+        $job = Job::latest('created_at')->paginate(40);
 
         $publicUser = User::all();
 
