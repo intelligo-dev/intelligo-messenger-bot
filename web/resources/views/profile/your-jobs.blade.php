@@ -9,10 +9,10 @@
 
         <h2 id="Travel-Badges">Таны оруулсан ажил</h2>
 
-        @if (!$ProfileTravelFlyers->count())
+        @if (!$ProfileJobs->count())
             Та ажил оруулаагүй байна.
         @else
-            @foreach($ProfileTravelFlyers as $job)
+            @foreach($ProfileJobs as $job)
                 <div class="col-sm-6 col-md-4">
                     <div class="row">
                         <div class="ui link cards" id="Travel-Flyer-Display-Cards">
