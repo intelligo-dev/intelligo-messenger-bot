@@ -780,3 +780,6 @@ input[type=text] {
   border-top-right-radius: 0; }
 
 /*# sourceMappingURL=app.css.map */
+.ui-image{
+  padding: 10px;
+}

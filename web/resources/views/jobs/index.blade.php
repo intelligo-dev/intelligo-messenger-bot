@@ -16,49 +16,25 @@
         </div>
 
         <div class="col-md-4 job-list" id="Flyers-ShowAll-Container">
-       
             @foreach($job as $jobs)
-                <div class="col-sm-12 col-md-12">
-                    <div class="row">
-                        <div class="ui link cards job-box-container" id="Travel-Flyer-Display-Cards">
-                            <div class="card job-box" id="Flyer-Card ">
-                                
-                                <div class="content">
-                                    <a href="{{ route('jobs.show', $jobs->title) }}">
-                                        <h4 class="ui header"> {{ str_limit($jobs->title, $limit = 80, $end = '...') }}</h4>
-                                    </a>
-                                    <div class="meta"><br>
-                                        @foreach ($jobs->owner->Profilephotos as $photo)
-                                            <a href="{{ route('users.show', $jobs->owner->id) }}" class="avatar">
-                                                <img class="ui avatar image mini" src="/{{ $photo->thumbnail_path }}" alt="{{ $jobs->owner->username }}'s Profile Picture">
-                                            </a>
-                                        @endforeach
-                                        <a href="{{ route('users.show', $jobs->owner->id) }}">
-                                            <span id="Flyer-Username-Index-Page">{{ $jobs->owner->username }}</span>
-                                        </a>
-                                    </div><br>
-                                    <div class="meta">
-                                        <a>{{ str_limit($jobs->excerpt, $limit = 79, $end = '...') }}</a>
-                                    </div>
-                                </div>
-                                <div class="extra content">
-                                    <span class="right floated">
-                                        {{ prettyDate($jobs->created_at) }}
-                                    </span>
-                                    <span>
-                                        <i class="thumbs up icon"></i>{{ $jobs->likes->count() }}&nbsp;
-                                        @if ($user && $user->owns($jobs))
-                                            <a href="{{ route('jobs.edit', $jobs->id) }}">
-                                                <i class="edit icon"></i>
-                                            </a>
-                                        @endif
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="ui items">
+              <div class="item">
+                <div class="image">
+               @foreach ($jobs->bannerPhotos as $photo)
+                  <img src="/{{ $photo->path }}">
+                  @endforeach
                 </div>
+                <div class="content" style="padding-top: 15px;">
+                  <a href="{{ route('jobs.show', $jobs->title) }}" class="header">{{ str_limit($jobs->title, $limit = 80, $end = '...') }}</a>
+                  <div class="meta">
+                    <span>{{ str_limit($jobs->description, $limit = 80, $end = '...') }}</span>
+                  </div>
+                
+                </div>
+              </div>
+            </div>
             @endforeach
+        
 
         </div>
 

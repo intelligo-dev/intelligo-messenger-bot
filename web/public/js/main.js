@@ -142,5 +142,4 @@ $('#thumbs-like-popup')
 }(jQuery));
 
 
-
 //# sourceMappingURL=main.js.map
