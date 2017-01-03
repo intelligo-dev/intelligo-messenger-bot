@@ -14,7 +14,7 @@
                             <div class="typeahead-field">
 
                                 <span class="typeahead-query">
-                                    {!! Form::text('keyword', null, array('id' => 'job-query', 'placeholder' => 'Ажил хайх...', 'autocomplete' =>'off')) !!}
+                                    {!! Form::text('keyword', null, array('id' => 'job-query', 'placeholder' => 'хямдрал хайх...', 'autocomplete' =>'off')) !!}
                                 </span>
                                 {!! Form::submit('Хайх', ['class' => 'ui inverted button', 'id' => 'Search-Button']) !!}
 

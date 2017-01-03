@@ -84,7 +84,7 @@
 
         <br>
         <a href="{{ URL::previous() }}"><button class="ui inverted red button">Буцах</button></a>
-        <a href="{{ route('jobs.index') }}"><button class="ui inverted green button">Бүх ажил</button></a>
+        <a href="{{ route('jobs.index') }}"><button class="ui inverted green button">Бүх хямдрал</button></a>
 
         <div class="col-md-12">
             @include('users.partials.status')

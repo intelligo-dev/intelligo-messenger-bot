@@ -7,10 +7,10 @@
 
     <div class="container" id="Your-Travel-Flyers-Container">
 
-        <h2 id="Travel-Badges">Таны оруулсан ажил</h2>
+        <h2 id="Travel-Badges">Таны оруулсан хямдрал</h2>
 
         @if (!$ProfileJobs->count())
-            Та ажил оруулаагүй байна.
+            Та хямдрал оруулаагүй байна.
         @else
             @foreach($ProfileJobs as $job)
                 <div class="col-sm-6 col-md-4">

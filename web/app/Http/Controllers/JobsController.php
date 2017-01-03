@@ -49,7 +49,7 @@ class JobsController extends Controller {
 
 		event('UserCreatedJob', $user);
 
-        flash()->success('Амжилттай', 'Амжилттай ажил нэмэгдлээ');
+        flash()->success('Амжилттай', 'Амжилттай хямдрал нэмэгдлээ');
 
         return redirect($job->pathToJob());
     }
@@ -77,7 +77,7 @@ class JobsController extends Controller {
 
         $job->update($request->all());
 
-        flash()->success('Амжилттай', 'Ажлын мэдээлэл амжилттай шинэчиллээ!');
+        flash()->success('Амжилттай', 'хямдралын мэдээлэл амжилттай шинэчиллээ!');
 
         return redirect('jobs');
     }
@@ -89,7 +89,7 @@ class JobsController extends Controller {
 
         $job->delete();
 
-        flash()->success("Амжилттай", "Ажлын мэдээлэл амжилттай устгалаа!");
+        flash()->success("Амжилттай", "хямдралын мэдээлэл амжилттай устгалаа!");
 
         return redirect()->back();
 

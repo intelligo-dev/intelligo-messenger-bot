@@ -9,7 +9,7 @@ class AddPhotoToJob
     //
 
     /**
-     * @var Ажил
+     * @var хямдрал
      */
     protected $job;
 

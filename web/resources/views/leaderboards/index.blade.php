@@ -13,7 +13,7 @@
                 <thead>
                     <tr>
                         <th colspan="3" class="center aligned">
-                            <i class="yellow trophy icon"></i>  Шилдэг ажил олгогчид
+                            <i class="yellow trophy icon"></i>  Шилдэг хямдрал олгогчид
                         </th>
                     </tr>
                     <tr>

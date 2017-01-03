@@ -87,7 +87,7 @@
         <div class="panel-heading" role="tab" id="headingTwo">
             <h4 class="panel-title">
                 <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    <strong>{{ $publicName->username }}'s </strong> ажил олгогч
+                    <strong>{{ $publicName->username }}'s </strong> хямдрал олгогч
                 </a>
             </h4>
         </div>
@@ -111,10 +111,10 @@
                         <div class="row">
                             @if ($publicName->jobs->count() >= 5)
                                 <img src="{{ ShowJobFor5() }}" class="ui tiny circular image" id="Public-Badge">
-                                <h4 id="badges-description">5 ажилын санал үүсгэсэн!</h4>
+                                <h4 id="badges-description">5 хямдралын санал үүсгэсэн!</h4>
                             @else
                                 <img src="{{ ShowJobFor5Shaded() }}" class="ui tiny circular image" id="Public-Badge">
-                                <h4 id="badges-description">5 ажилын санал үүсгэсэн</h4>
+                                <h4 id="badges-description">5 хямдралын санал үүсгэсэн</h4>
                             @endif
                         </div>
                     </div>
@@ -122,10 +122,10 @@
                         <div class="row">
                             @if ($publicName->jobs->count() >= 10)
                                 <img src="{{ ShowJobFor10() }}" class="ui tiny circular image" id="Public-Badge">
-                                <h4 id="badges-description">10 ажилын санал үүсгэсэн!</h4>
+                                <h4 id="badges-description">10 хямдралын санал үүсгэсэн!</h4>
                             @else
                                 <img src="{{ ShowJobFor10Shaded() }}" class="ui tiny circular image" id="Public-Badge">
-                                <h4 id="badges-description">10 ажилын санал үүсгэсэн</h4>
+                                <h4 id="badges-description">10 хямдралын санал үүсгэсэн</h4>
                             @endif
                         </div>
                     </div>
@@ -133,10 +133,10 @@
                         <div class="row">
                             @if ($publicName->jobs->count() >= 25)
                                 <img src="{{ ShowJobFor25() }}" class="ui tiny circular image" id="Public-Badge">
-                                <h4 id="badges-description">25 ажилын санал үүсгэсэн!</h4>
+                                <h4 id="badges-description">25 хямдралын санал үүсгэсэн!</h4>
                             @else
                                 <img src="{{ ShowJobFor25Shaded() }}" class="ui tiny circular image" id="Public-Badge">
-                                <h4 id="badges-description">25 ажилын санал үүсгэсэн</h4>
+                                <h4 id="badges-description">25 хямдралын санал үүсгэсэн</h4>
                             @endif
                         </div>
                     </div>
@@ -144,10 +144,10 @@
                         <div class="row">
                             @if ($publicName->jobs->count() >= 50)
                                 <img src="{{ ShowJobFor50() }}" class="ui tiny circular image" id="Public-Badge">
-                                <h4 id="badges-description">50 ажилын санал үүсгэсэн!</h4>
+                                <h4 id="badges-description">50 хямдралын санал үүсгэсэн!</h4>
                             @else
                                 <img src="{{ ShowJobFor50Shaded() }}" class="ui tiny circular image" id="Public-Badge">
-                                <h4 id="badges-description">50 ажилын санал үүсгэсэн</h4>
+                                <h4 id="badges-description">50 хямдралын санал үүсгэсэн</h4>
                             @endif
                         </div>
                     </div>

@@ -74,7 +74,7 @@
     <div class="btn-group" role="group">
         <a href="{{ route('profile.your-jobs', $user->username) }}">
             <button type="button" id="favorites" class="btn btn-primary"><i class="book icon"></i>
-                <div class="hidden-xs">Таны оруулсан ажил</div>
+                <div class="hidden-xs">Таны оруулсан хямдрал</div>
             </button>
         </a>
     </div>
