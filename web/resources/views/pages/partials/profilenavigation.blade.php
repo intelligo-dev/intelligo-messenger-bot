@@ -25,7 +25,7 @@
                     <li><a href="{{ url('/') }}" class="page-scroll">Нүүр</a></li>
                     <li><a href="{{ route('jobs.index') }}" class="page-scroll">Сурталчилгаа</a></li>
                     <li><a href="{{ route('jobs.create') }}" class="page-scroll">Сурталчилгаа нэмэх</a></li>
-                    <li><a href="#" class="page-scroll">{{ $user->username }}</a></li>
+                    <li><a href="{{ route('profile.index', $user->username) }}" class="page-scroll">{{ $user->username }}</a></li>
                     <li><a href="{{ url('/logout') }}" class="page-scroll"><i class="fa fa-btn fa-sign-out"></i>Гарах</a></li>
                 @endif
             </ul>

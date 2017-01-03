@@ -99,10 +99,10 @@
                     <div class="col-xs-6 col-sm-3 col-md-2">
                         <div class="row">
                             @if ($publicName->jobs->count() >= 1)
-                                <img src="{{ ShowFlyerFor1() }}" class="ui tiny circular image" id="Public-Badge">
+                                <img src="{{ ShowJobFor1() }}" class="ui tiny circular image" id="Public-Badge">
                                 <h4 id="badges-description">Анхны ажлаа үүсгэсэн!</h4>
                             @else
-                                <img src="{{ ShowFlyerFor1Shaded() }}" class="ui tiny circular image" id="Public-Badge">
+                                <img src="{{ ShowJobFor1Shaded() }}" class="ui tiny circular image" id="Public-Badge">
                                 <h4 id="badges-description">Анхны ажлаа үүсгэсэн</h4>
                             @endif
                         </div>
@@ -110,10 +110,10 @@
                     <div class="col-xs-6 col-sm-3 col-md-2">
                         <div class="row">
                             @if ($publicName->jobs->count() >= 5)
-                                <img src="{{ ShowFlyerFor5() }}" class="ui tiny circular image" id="Public-Badge">
+                                <img src="{{ ShowJobFor5() }}" class="ui tiny circular image" id="Public-Badge">
                                 <h4 id="badges-description">5 ажилын санал үүсгэсэн!</h4>
                             @else
-                                <img src="{{ ShowFlyerFor5Shaded() }}" class="ui tiny circular image" id="Public-Badge">
+                                <img src="{{ ShowJobFor5Shaded() }}" class="ui tiny circular image" id="Public-Badge">
                                 <h4 id="badges-description">5 ажилын санал үүсгэсэн</h4>
                             @endif
                         </div>
@@ -121,10 +121,10 @@
                     <div class="col-xs-6 col-sm-3 col-md-2">
                         <div class="row">
                             @if ($publicName->jobs->count() >= 10)
-                                <img src="{{ ShowFlyerFor10() }}" class="ui tiny circular image" id="Public-Badge">
+                                <img src="{{ ShowJobFor10() }}" class="ui tiny circular image" id="Public-Badge">
                                 <h4 id="badges-description">10 ажилын санал үүсгэсэн!</h4>
                             @else
-                                <img src="{{ ShowFlyerFor10Shaded() }}" class="ui tiny circular image" id="Public-Badge">
+                                <img src="{{ ShowJobFor10Shaded() }}" class="ui tiny circular image" id="Public-Badge">
                                 <h4 id="badges-description">10 ажилын санал үүсгэсэн</h4>
                             @endif
                         </div>
@@ -132,10 +132,10 @@
                     <div class="col-xs-6 col-sm-3 col-md-2">
                         <div class="row">
                             @if ($publicName->jobs->count() >= 25)
-                                <img src="{{ ShowFlyerFor25() }}" class="ui tiny circular image" id="Public-Badge">
+                                <img src="{{ ShowJobFor25() }}" class="ui tiny circular image" id="Public-Badge">
                                 <h4 id="badges-description">25 ажилын санал үүсгэсэн!</h4>
                             @else
-                                <img src="{{ ShowFlyerFor25Shaded() }}" class="ui tiny circular image" id="Public-Badge">
+                                <img src="{{ ShowJobFor25Shaded() }}" class="ui tiny circular image" id="Public-Badge">
                                 <h4 id="badges-description">25 ажилын санал үүсгэсэн</h4>
                             @endif
                         </div>
@@ -143,10 +143,10 @@
                     <div class="col-xs-6 col-sm-3 col-md-2">
                         <div class="row">
                             @if ($publicName->jobs->count() >= 50)
-                                <img src="{{ ShowFlyerFor50() }}" class="ui tiny circular image" id="Public-Badge">
+                                <img src="{{ ShowJobFor50() }}" class="ui tiny circular image" id="Public-Badge">
                                 <h4 id="badges-description">50 ажилын санал үүсгэсэн!</h4>
                             @else
-                                <img src="{{ ShowFlyerFor50Shaded() }}" class="ui tiny circular image" id="Public-Badge">
+                                <img src="{{ ShowJobFor50Shaded() }}" class="ui tiny circular image" id="Public-Badge">
                                 <h4 id="badges-description">50 ажилын санал үүсгэсэн</h4>
                             @endif
                         </div>
