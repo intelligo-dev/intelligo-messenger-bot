@@ -119,7 +119,7 @@
                     [
                         '<div class="info_content">' +
                             '<a href="{{ $jobs->title }}">' +
-                                '<img class="ui top aligned small image" src="/{{ $jobs->thumbnail_path }}" alt="Test">' +
+                                // '<img class="ui top aligned small image" src="/{{  $jobs->thumbnail_path }}">' +
                                 '<h5 id="GoogleMaps-Content-Title">{{ $jobs->title }}</h5>' +
                             '</a>' +
                         '</div>'

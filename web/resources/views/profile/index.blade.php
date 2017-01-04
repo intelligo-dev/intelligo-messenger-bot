@@ -86,9 +86,9 @@
         </div>
 
 
-        <div class="col-md-12" id="badges-container">
+      <!--   <div class="col-md-12" id="badges-container">
             @include('profile.partials.badges')
-        </div>
+        </div> -->
 
         <div class="col-md-12">
             @include('profile.partials.profile-status')

@@ -30,7 +30,7 @@
                                 <i class="thumbs outline up icon large"></i> {{ $job->likes->count() }}
                             </a>
                             <div id="popup1" class="ui custom basic popup">
-                                Like Travel Flyer
+                                Таалагдсан
                             </div>
                     @endif
                 </div>
@@ -80,7 +80,7 @@
             @else
             <div class="col-md-12" id="ProfileFormUpload">
                 <h5 class="text-center">сурталчилгааны зураг:</h5>
-                <p>Upload 12 photos at a time only.</p>
+                <p>12 зураг оруулах боломжтой.</p>
                 <form action="/travel/{{ $job->title }}/photo" method="post" class="dropzone" id="addFlyerPhotosForm" enctype="multipart/form-data">
                     {{ csrf_field() }}
                 </form>

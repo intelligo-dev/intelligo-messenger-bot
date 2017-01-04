@@ -1,4 +1,4 @@
-
+<!-- 
 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
     <div class="panel panel-default">
         <div class="panel-heading" role="tab" id="headingOne">
@@ -156,7 +156,7 @@
             </div>
         </div>
     </div>
-    <div class="panel panel-default">
+     <div class="panel panel-default">
         <div class="panel-heading" role="tab" id="headingThree">
             <h4 class="panel-title">
                 <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
@@ -212,4 +212,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->

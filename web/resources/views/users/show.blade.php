@@ -35,7 +35,7 @@
         </div>
 
         <div class="col-md-12" id="Public-Profile-Users-Flyers-Container">
-            <h4 id="Public-Profile-Header">{{ $publicName->username }}ий оруулсан ажлын саналууд</h4><hr>
+            <h4 id="Public-Profile-Header">{{ $publicName->username }}ий оруулсан хямдралууд</h4><hr>
             @foreach($ProfileJobs as $public)
                 <div class="col-sm-6 col-md-4" id="card-center">
                     <div class="row">

@@ -57,7 +57,7 @@
                                     <div class="meta"><br>
                                         @foreach ($job->owner->Profilephotos as $photo)
                                             <a href="{{ route('users.show', $job->owner->id) }}" class="avatar">
-                                                <img class="ui avatar image mini" src="/travel/{{ $photo->thumbnail_path }}" alt="{{ $job->owner->username }}'s Profile Picture">
+                                                <img class="ui avatar image mini" src="/{{ $photo->thumbnail_path }}" alt="{{ $job->owner->username }}'s Profile Picture">
                                             </a>
                                         @endforeach
                                         <a href="{{ route('users.show', $job->owner->id) }}">

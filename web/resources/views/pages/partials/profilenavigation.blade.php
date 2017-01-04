@@ -64,13 +64,13 @@
             </button>
         </a>
     </div>
-    <div class="btn-group" role="group">
+   <!--  <div class="btn-group" role="group">
         <a href="{{ route('users.show', $user->id) }}">
             <button type="button" id="stars" class="btn btn-primary"><i class="users icon"></i>
                 <div class="hidden-xs">Хувийн мэдээлэл</div>
             </button>
         </a>
-    </div>
+    </div> -->
     <div class="btn-group" role="group">
         <a href="{{ route('profile.your-jobs', $user->username) }}">
             <button type="button" id="favorites" class="btn btn-primary"><i class="book icon"></i>
